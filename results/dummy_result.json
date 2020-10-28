@@ -1,5 +1,8 @@
 [
   {
     "foo": "bar"
+  },
+  {
+    "hallo": "welt"
   }
 ]
