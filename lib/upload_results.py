@@ -1,5 +1,6 @@
 import glob
 import os
+import json
 
 import firebase_admin
 import pandas as pd
@@ -31,10 +32,11 @@ def delete_collection(coll_ref, batch_size):
 def upload_json_data(script_path, coll_ref):
     list_of_files = glob.glob(script_path + "/../results/*.json")
     for json_file in list_of_files:
-        print("Uploading " + json_file)
-        df = pd.read_json(json_file)
-        tmp = df.to_dict(orient='records')
-        list(map(lambda x: coll_ref.add(x), tmp))
+        file_name = os.path.basename(json_file)
+        with open(json_file) as file:
+            print("Uploading " + json_file)
+            data = json.load(file)
+            coll_ref.document(file_name).set(document_data=data)
 
 def upload_csv_data(script_path, coll_ref):
     list_of_files = glob.glob(script_path + "/../results/*.csv")
