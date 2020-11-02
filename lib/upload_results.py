@@ -38,6 +38,15 @@ def upload_json_data(script_path, coll_ref):
             data = json.load(file)
             coll_ref.document(file_name).set(document_data=data)
 
+def upload_geojson_data(script_path, coll_ref):
+    list_of_files = glob.glob(script_path + "/../results/*.geojson")
+    for json_file in list_of_files:
+        file_name = os.path.basename(json_file)
+        with open(json_file) as file:
+            print("Uploading " + json_file)
+            data = json.load(file)
+            coll_ref.document(file_name).set(document_data=data)
+
 def upload_csv_data(script_path, coll_ref):
     list_of_files = glob.glob(script_path + "/../results/*.csv")
     for csv_file in list_of_files:
@@ -68,3 +77,4 @@ coll_ref = open_database_connection(cred, firebase_database_url, firebase_collec
 delete_collection(coll_ref, 10_000)
 upload_json_data(script_path, coll_ref)
 upload_csv_data(script_path, coll_ref)
+upload_geojson_data(script_path, coll_ref)
