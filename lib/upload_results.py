@@ -50,11 +50,12 @@ def upload_geojson_data(script_path, coll_ref):
 def upload_csv_data(script_path, coll_ref):
     list_of_files = glob.glob(script_path + "/../results/*.csv")
     for csv_file in list_of_files:
+        file_name = os.path.basename(csv_file)
+
         print("Uploading " + csv_file)
         df = pd.read_csv(csv_file)
         tmp = df.to_dict(orient='records')
-        list(map(lambda x: coll_ref.add(x), tmp))
-
+        list(map(lambda x: coll_ref.add(x, document_id=file_name), tmp))
 #
 # Main
 #
