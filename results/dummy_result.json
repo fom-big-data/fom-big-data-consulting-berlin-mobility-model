@@ -1,8 +1,10 @@
-[
-  {
-    "foo": "bar"
-  },
-  {
-    "hallo": "welt"
-  }
-]
+{
+  "main": [
+    {
+      "foo": "bar"
+    },
+    {
+      "hallo": "welt"
+    }
+  ]
+}
