@@ -12,7 +12,7 @@ def load_private_key(script_path, firebase_private_key_file):
     return cred
 
 
-def upload_data(script_path, bucket):
+def upload_data(script_path, bucket, directory):
     list_of_files = glob.glob(script_path + "/../results/*.geojson")
     for geojson_file in list_of_files:
 
@@ -24,7 +24,7 @@ def upload_data(script_path, bucket):
                 round(file_size_mb)) + "MB)")
         else:
             print("✔️ Uploading " + geojson_file)
-            blob = bucket.blob(file_name)
+            blob = bucket.blob(directory + "/" + file_name)
             blob.upload_from_filename(geojson_file)
 
 
@@ -39,6 +39,7 @@ script_path = os.path.dirname(__file__)
 firebase_database_url = "https://berlin-mobility.firebaseio.com/"
 firebase_private_key_file = "berlin-mobility-firebase-adminsdk-6wjn3-3c92dc67f7.json"
 firebase_storage_url = "berlin-mobility.appspot.com"
+firebase_storage_directory = "results"
 
 # Load connection credentials
 cred = load_private_key(script_path, firebase_private_key_file)
@@ -47,4 +48,4 @@ cred = load_private_key(script_path, firebase_private_key_file)
 initialize_app(cred, {'storageBucket': firebase_storage_url})
 
 # Clean data
-upload_data(script_path, storage.bucket())
+upload_data(script_path, storage.bucket(), firebase_storage_directory)
