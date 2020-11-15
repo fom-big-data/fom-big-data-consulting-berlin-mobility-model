@@ -73,7 +73,8 @@ def upload_csv_data(script_path, coll_ref):
         file_name = os.path.basename(csv_file)
 
         if file_size_mb > file_size_limit_mb:
-            print("⚠️ File to large " + csv_file + " (must be 10MB, but is " + str(round(file_size_mb)) + "MB)")
+            print(
+                "⚠️ File to large " + csv_file + " (must be " + str(file_size_limit_mb) + "mb, but is " + str(round(file_size_mb)) + "MB)")
         else:
             print("✔️ Uploading " + csv_file)
             df = pd.read_csv(csv_file)

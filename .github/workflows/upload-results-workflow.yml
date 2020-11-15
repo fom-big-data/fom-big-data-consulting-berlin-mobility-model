@@ -28,6 +28,9 @@ jobs:
           FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
         run: |
           echo $FIREBASE_PRIVATE_KEY > lib/berlin-mobility-firebase-adminsdk-6wjn3-3c92dc67f7.json
-      - name: Upload results
+      - name: Upload results to Cloud Firestore
         run: |
-          python lib/upload_results.py
+          python lib/upload_results_to_cloud_firestore.py
+      - name: Upload results to Firebase Storage
+        run: |
+          python lib/upload_results_to_firebase_storage.py
