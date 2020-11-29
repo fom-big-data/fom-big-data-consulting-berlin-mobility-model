@@ -34,7 +34,7 @@ stations = json.load(f)['data']['stations']
 places = []
 for station in stations:
     placegeojson = {}
-    placegeojson["geometry"] = {"type": "Point", "coordinates": [station["lat"], station["lon"]]}
+    placegeojson["geometry"] = {"type": "Point", "coordinates": [station["lon"],station["lat"]]}
     placegeojson["type"] = "Feature"
     placegeojson["properties"] = {"name": station["name"],
                                   "station_id": station["station_id"],
