@@ -22,3 +22,5 @@
 /notebooks/00-basemodel/atari-rainbow-dqn/output/**/*.gif
 /notebooks/00-basemodel/atari-rainbow-dqn/output/**/*.zip
 /notebooks/00-basemodel/atari-rainbow-dqn/output/latest
+*.ipynb_checkpoints
+EXPLORATION/cache
