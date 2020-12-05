@@ -60,8 +60,8 @@ def get_coordinates(points):
     data = []
     for p in points:
         coord = {}
-        coord["lat"] = p.GetX()
-        coord["lon"] = p.GetY()
+        coord["lon"] = p.GetX()
+        coord["lat"] = p.GetY()
         data.append(coord)
 
     return data
