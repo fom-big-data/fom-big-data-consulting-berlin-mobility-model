@@ -1,3 +1,4 @@
+import csv
 import json
 import random
 
@@ -20,7 +21,6 @@ def get_polygons(geojson):
         geom = feature['geometry']
         geom = json.dumps(geom)
         polygon = ogr.CreateGeometryFromJson(geom)
-
 
         polygons.append(polygon)
 
@@ -72,6 +72,14 @@ def write_coords_to_json(coords, file_path):
     with open(file_path, 'w') as f:
         f.write('%s' % json_data)
 
+
+def write_coords_to_csv(coords, file_path):
+    with open(file_path, 'w') as f:
+        writer = csv.writer(f)
+        for coord in coords:
+            writer.writerow([coord["lon"], coord["lat"]])
+
+
 def write_coords_to_geojson(coords, file_path):
     features = []
     for coord in coords:
@@ -84,6 +92,7 @@ def write_coords_to_geojson(coords, file_path):
 
     with open(file_path, 'w') as f:
         f.write('%s' % collection)
+
 
 #
 # Main
@@ -101,8 +110,9 @@ polygons = get_polygons(geojson)
 points = get_random_points_in_polygons(polygons, NUM_POINTS_PER_ZIP_CODE)
 
 # Get coordinates
-coord = get_coordinates(points)
+coords = get_coordinates(points)
 
 # Write coords to file
-write_coords_to_json(coord, '../results/sample-points.json')
-write_coords_to_geojson(coord, '../results/sample-points.geojson')
+write_coords_to_json(coords, '../results/sample-points.json')
+write_coords_to_csv(coords, '../results/sample-points.csv')
+write_coords_to_geojson(coords, '../results/sample-points.geojson')
