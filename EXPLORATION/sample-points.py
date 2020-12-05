@@ -10,7 +10,9 @@ def read_geojson(file_path):
     return json.load(file)
 
 
-def get_polygon(geojson):
+def get_polygons(geojson):
+    polygons = []
+
     # Extract polygons from inhabitants file
     features = geojson['features']
 
@@ -19,7 +21,10 @@ def get_polygon(geojson):
         geom = json.dumps(geom)
         polygon = ogr.CreateGeometryFromJson(geom)
 
-    return polygon
+
+        polygons.append(polygon)
+
+    return polygons
 
 
 def get_bounding_box(polygon):
@@ -27,24 +32,26 @@ def get_bounding_box(polygon):
     return env[0], env[2], env[1], env[3]
 
 
-def get_random_points_in_polygon(polygon, num_point):
-    counter = 0
+def get_random_points_in_polygons(polygons, num_point):
     points = []
 
-    # Get bounding box
-    xmin, ymin, xmax, ymax = get_bounding_box(polygon)
+    for polygon in polygons:
+        counter = 0
 
-    for i in range(num_point):
-        while counter < num_point:
+        # Get bounding box
+        xmin, ymin, xmax, ymax = get_bounding_box(polygon)
 
-            point = ogr.Geometry(ogr.wkbPoint)
-            point.AddPoint(random.uniform(xmin, xmax),
-                           random.uniform(ymin, ymax))
+        for i in range(num_point):
+            while counter < num_point:
 
-            if point.Within(polygon):
-                points.append(point)
+                point = ogr.Geometry(ogr.wkbPoint)
+                point.AddPoint(random.uniform(xmin, xmax),
+                               random.uniform(ymin, ymax))
 
-                counter += 1
+                if point.Within(polygon):
+                    points.append(point)
+
+                    counter += 1
 
     return points
 
@@ -82,16 +89,16 @@ def write_coords_to_geojson(coords, file_path):
 # Main
 #
 
-NUM_POINT = 10_000
+NUM_POINTS_PER_ZIP_CODE = 50
 
 # Read berlin-inhabitants.geojson
 geojson = read_geojson('../data/inhabitants/berlin-inhabitants.geojson')
 
-# Get polygon
-polygon = get_polygon(geojson)
+# Get polygons
+polygons = get_polygons(geojson)
 
 # Generate points in polygons
-points = get_random_points_in_polygon(polygon, NUM_POINT)
+points = get_random_points_in_polygons(polygons, NUM_POINTS_PER_ZIP_CODE)
 
 # Get coordinates
 coord = get_coordinates(points)
