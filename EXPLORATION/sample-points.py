@@ -1,6 +1,7 @@
 import json
 import random
 
+from geojson import FeatureCollection
 from osgeo import ogr
 
 
@@ -65,15 +66,17 @@ def write_coords_to_json(coords, file_path):
         f.write('%s' % json_data)
 
 def write_coords_to_geojson(coords, file_path):
-    geojson_data = []
+    features = []
     for coord in coords:
         feature = {}
         feature["geometry"] = {"type": "Point", "coordinates": [coord["lon"], coord["lat"]]}
         feature["type"] = "Feature"
-        geojson_data.append(feature)
+        features.append(feature)
+
+    collection = FeatureCollection(features)
 
     with open(file_path, 'w') as f:
-        f.write('%s' % geojson_data)
+        f.write('%s' % collection)
 
 #
 # Main
