@@ -49,9 +49,14 @@ def get_points_with_spatial_distance(g, points, travel_time_min):
                                                           travel_time_min=travel_time_min,
                                                           real_speed=True)
 
+        mean_spatial_distances.append(mean_spatial_distance)
+
+        nearest_node_id = ox.get_nearest_node(g, start_point)
+        nearest_node = g.nodes[nearest_node_id]
+
         point_with_spatial_distance = {
-            "lon": point["lon"],
-            "lat": point["lat"],
+            "lon": nearest_node["x"],
+            "lat": nearest_node["y"],
             "mean_spatial_distance_15min": mean_spatial_distance,
         }
 
@@ -78,7 +83,6 @@ def get_possible_routes(g, start_point, travel_time_min, real_speed=True):
     distance_type = 'real_time' if real_speed else 'time'
     subgraph = nx.ego_graph(g, center_node, radius=travel_time_min, distance=distance_type)
     return ox.graph_to_gdfs(subgraph)
-
 
 def get_convex_hull(nodes):
     return MultiPoint(nodes.reset_index()['geometry']).convex_hull.coords.xy
@@ -110,15 +114,19 @@ def write_coords_to_geojson(coords, file_path):
 PLACE_NAME = "Berlin, Germany"
 TRAVEL_TIME_MIN = 15
 
+mean_spatial_distances = []
+
 # Load bus graph
 g = load_graphml(PLACE_NAME, '["bus"="yes"]')
 
 # Load sample points
 sample_points = load_sample_points("../results/sample-points.csv")
 
-points_with_spatial_distance = get_points_with_spatial_distance(g, sample_points, TRAVEL_TIME_MIN)
+points_with_spatial_distance = get_points_with_spatial_distance(g, sample_points[:5000], TRAVEL_TIME_MIN)
 
 # Write coords to file
 write_coords_to_geojson(points_with_spatial_distance, '../results/isochrones-bus.geojson')
 
 print("Complete!")
+print("min distance " + str(min(mean_spatial_distances)))
+print("max distance " + str(max(mean_spatial_distances)))
