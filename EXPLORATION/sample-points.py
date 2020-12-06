@@ -34,24 +34,38 @@ def get_bounding_box(polygon):
 
 def get_random_points_in_polygons(polygons, num_point):
     points = []
+    xmin = None
+    ymin = None
+    xmax = None
+    ymax = None
 
     for polygon in polygons:
-        counter = 0
 
         # Get bounding box
-        xmin, ymin, xmax, ymax = get_bounding_box(polygon)
+        boundingXmin, boundingYmin, boundingXmax, boundingYmax = get_bounding_box(polygon)
 
-        for i in range(num_point):
-            while counter < num_point:
+        if xmin == None or boundingXmin < xmin:
+            xmin = boundingXmin
+        if ymin == None or boundingYmin < ymin:
+            ymin = boundingYmin
+        if xmax == None or boundingXmax > xmax:
+            xmax = boundingXmax
+        if ymax == None or boundingYmax > ymax:
+            ymax = boundingYmax
 
-                point = ogr.Geometry(ogr.wkbPoint)
-                point.AddPoint(random.uniform(xmin, xmax),
-                               random.uniform(ymin, ymax))
 
-                if point.Within(polygon):
-                    points.append(point)
+    counter = 0
+    while counter < num_point:
 
-                    counter += 1
+        point = ogr.Geometry(ogr.wkbPoint)
+        point.AddPoint(random.uniform(xmin, xmax),
+                       random.uniform(ymin, ymax))
+
+        for polygon in polygons:
+            if point.Within(polygon):
+                points.append(point)
+
+                counter += 1
 
     return points
 
@@ -98,7 +112,7 @@ def write_coords_to_geojson(coords, file_path):
 # Main
 #
 
-NUM_POINTS_PER_ZIP_CODE = 50
+NUM_POINTS = 10_000
 
 # Read berlin-inhabitants.geojson
 geojson = read_geojson('../data/inhabitants/berlin-inhabitants.geojson')
@@ -107,7 +121,7 @@ geojson = read_geojson('../data/inhabitants/berlin-inhabitants.geojson')
 polygons = get_polygons(geojson)
 
 # Generate points in polygons
-points = get_random_points_in_polygons(polygons, NUM_POINTS_PER_ZIP_CODE)
+points = get_random_points_in_polygons(polygons, NUM_POINTS)
 
 # Get coordinates
 coords = get_coordinates(points)
