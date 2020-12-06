@@ -23,4 +23,5 @@
 /notebooks/00-basemodel/atari-rainbow-dqn/output/**/*.zip
 /notebooks/00-basemodel/atari-rainbow-dqn/output/latest
 *.ipynb_checkpoints
-EXPLORATION/cache
+/EXPLORATION/cache
+/EXPLORATION/tmp/
