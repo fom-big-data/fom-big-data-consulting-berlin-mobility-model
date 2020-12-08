@@ -1,9 +1,9 @@
 {
-  "id": "isochrones-bus",
+  "id": "isochrones",
   "type": "circle",
-  "source": "isochrones-bus",
+  "source": "isochrones",
   "paint": {
-    "circle-radius": 16,
+    "circle-radius": 8,
     "circle-color": [
       "interpolate",
       [
@@ -13,12 +13,12 @@
         "get",
         "mean_spatial_distance_15min"
       ],
-      0,
-      "rgba(33,102,172,0)",
-      1500,
-      "rgb(178,24,43)"
+      186,
+      "rgba(255,50,50,0.2)",
+      7581,
+      "rgba(50,255,50,0.2)"
     ],
-    "circle-stroke-color": "white",
+    "circle-stroke-color": "transparent",
     "circle-stroke-width": 1
   }
 }
