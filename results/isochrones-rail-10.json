@@ -1,0 +1,24 @@
+{
+  "id": "isochrones",
+  "type": "circle",
+  "source": "isochrones",
+  "paint": {
+    "circle-radius": 8,
+    "circle-color": [
+      "interpolate",
+      [
+        "linear"
+      ],
+      [
+        "get",
+        "mean_spatial_distance_10min"
+      ],
+      21,
+      "rgba(255,50,50,0.2)",
+      10983,
+      "rgba(50,255,50,0.2)"
+    ],
+    "circle-stroke-color": "transparent",
+    "circle-stroke-width": 1
+  }
+}
