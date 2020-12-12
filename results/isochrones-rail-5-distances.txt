@@ -1,0 +1,1 @@
+min distance 21.36643176962276 / max distance 5493.137498146489
