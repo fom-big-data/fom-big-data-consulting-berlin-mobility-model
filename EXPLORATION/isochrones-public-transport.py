@@ -32,12 +32,10 @@ def load_graphml(place_name, network_type=None, custom_filter=None):
 
 def get_means_of_transport_graph(name):
     if name == "all":
-        return nx.algorithms.operators.all.compose_all([get_means_of_transport_graph("bike"),
-                                                        get_means_of_transport_graph("bus"),
+        return nx.algorithms.operators.all.compose_all([get_means_of_transport_graph("bus"),
                                                         get_means_of_transport_graph("subway"),
                                                         get_means_of_transport_graph("tram"),
-                                                        get_means_of_transport_graph("rail"),
-                                                        ])
+                                                        get_means_of_transport_graph("rail")])
     if name == "bike":
         return load_graphml_from_file(file_path="tmp/" + name + ".graphml",
                                       place_name=PLACE_NAME,
