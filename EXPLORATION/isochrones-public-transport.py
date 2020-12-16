@@ -201,10 +201,8 @@ def write_mean_spatial_distances_to_file(mean_spatial_distances,
 #
 
 PLACE_NAME = "Berlin, Germany"
-# TRAVEL_TIMES = [5, 10, 15]
-# MEANS_OF_TRANSPORT = ["all", "bike", "bus", "subway", "tram", "rail"]
-TRAVEL_TIMES = [5]
-MEANS_OF_TRANSPORT = ["tram"]
+TRAVEL_TIMES = [5, 10, 15]
+MEANS_OF_TRANSPORT = ["all", "bike", "bus", "subway", "tram", "rail"]
 
 # Load complete graph
 # g_all = load_graphml_from_file(file_path='tmp/all.graphml', place_name=PLACE_NAME, network_type='all')
