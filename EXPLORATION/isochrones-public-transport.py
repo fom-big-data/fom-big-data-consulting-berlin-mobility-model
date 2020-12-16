@@ -53,6 +53,8 @@ def get_means_of_transport_graph(transport):
 def enhance_with_speed(g, time_attribute='time', transport=None):
     for _, _, _, data in g.edges(data=True, keys=True):
 
+        speed = None
+
         if (transport == 'walk'):
             speed = 6.0
         elif (transport == 'bus'):
@@ -190,10 +192,10 @@ def write_mean_spatial_distances_to_file(mean_spatial_distances,
                                          max_spatial_distances,
                                          file_path):
     with open(file_path, "w") as f:
-        f.write("  mean distance min " + str(min(mean_spatial_distances)) + " / max " + str(max(mean_spatial_distances)))
-        f.write("median distance min " + str(min(median_spatial_distances)) + " / max " + str(max(median_spatial_distances)))
-        f.write("   min distance min " + str(min(min_spatial_distances)) + " / max " + str(max(min_spatial_distances)))
-        f.write("   max distance min " + str(min(max_spatial_distances)) + " / max " + str(max(max_spatial_distances)))
+        f.write("  mean distance min " + str(min(mean_spatial_distances)) + " / max " + str(max(mean_spatial_distances)) + "\n")
+        f.write("median distance min " + str(min(median_spatial_distances)) + " / max " + str(max(median_spatial_distances)) + "\n")
+        f.write("   min distance min " + str(min(min_spatial_distances)) + " / max " + str(max(min_spatial_distances)) + "\n")
+        f.write("   max distance min " + str(min(max_spatial_distances)) + " / max " + str(max(max_spatial_distances)) + "\n")
 
 
 #
