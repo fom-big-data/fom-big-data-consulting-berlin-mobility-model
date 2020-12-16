@@ -101,9 +101,13 @@ def get_points_with_spatial_distance(g, points, travel_time_min):
     for point_index in progress_bar:
         point = points[point_index]
         start_point = (float(point["lat"]), float(point["lon"]))
-        mean_spatial_distance = get_mean_spatial_distance(g=g,
-                                                          start_point=start_point,
-                                                          travel_time_min=travel_time_min)
+
+        mean_spatial_distance, \
+        median_spatial_distance, \
+        min_spatial_distance, \
+        max_spatial_distance = get_spatial_distance(g=g,
+                                                    start_point=start_point,
+                                                    travel_time_min=travel_time_min)
 
         nearest_node_id = ox.get_nearest_node(g, start_point)
         nearest_node = g.nodes[nearest_node_id]
@@ -112,6 +116,9 @@ def get_points_with_spatial_distance(g, points, travel_time_min):
             "lon": nearest_node["x"],
             "lat": nearest_node["y"],
             "mean_spatial_distance_" + str(travel_time_min) + "min": mean_spatial_distance,
+            "median_spatial_distance_" + str(travel_time_min) + "min": median_spatial_distance,
+            "min_spatial_distance_" + str(travel_time_min) + "min": min_spatial_distance,
+            "max_spatial_distance_" + str(travel_time_min) + "min": max_spatial_distance
         }
 
         if mean_spatial_distance > 0:
@@ -123,17 +130,17 @@ def get_points_with_spatial_distance(g, points, travel_time_min):
     return points_with_spatial_distance, failed_points, mean_spatial_distances
 
 
-def get_mean_spatial_distance(g, start_point, travel_time_min, distance_attribute='time'):
+def get_spatial_distance(g, start_point, travel_time_min, distance_attribute='time'):
     try:
         # print("OKAY " + str(start_point))
         nodes, edges = get_possible_routes(g, start_point, travel_time_min, distance_attribute)
 
         longitudes, latitudes = get_convex_hull(nodes)
         distances = get_distances(start_point, latitudes, longitudes)
-        return np.mean(distances)
+        return np.mean(distances), np.median(distances), np.min(distances), np.max(distances)
     except:
         # print("FAIL " + str(start_point))
-        return 0
+        return 0, 0, 0, 0
 
 
 def get_possible_routes(g, start_point, travel_time_min, distance_attribute):
