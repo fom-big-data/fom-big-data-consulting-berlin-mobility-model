@@ -1,0 +1,31 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          13.266667,
+          52.483333
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Grunewald"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          13.386944,
+          52.520278
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "S+U Friedrichstrasse"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}
