@@ -96,6 +96,9 @@ def get_points_with_spatial_distance(g, points, travel_time_min):
     points_with_spatial_distance = []
     failed_points = []
     mean_spatial_distances = []
+    median_spatial_distances = []
+    min_spatial_distances = []
+    max_spatial_distances = []
 
     progress_bar = tqdm(iterable=range(len(points)), unit="points", desc="Evaluate points")
     for point_index in progress_bar:
@@ -123,11 +126,19 @@ def get_points_with_spatial_distance(g, points, travel_time_min):
 
         if mean_spatial_distance > 0:
             mean_spatial_distances.append(mean_spatial_distance)
+            median_spatial_distances.append(median_spatial_distance)
+            min_spatial_distances.append(min_spatial_distance)
+            max_spatial_distances.append(max_spatial_distance)
             points_with_spatial_distance.append(point_with_spatial_distance)
         else:
             failed_points.append(point_with_spatial_distance)
 
-    return points_with_spatial_distance, failed_points, mean_spatial_distances
+    return points_with_spatial_distance, \
+           failed_points, \
+           mean_spatial_distances, \
+           median_spatial_distances, \
+           min_spatial_distances, \
+           max_spatial_distances
 
 
 def get_spatial_distance(g, start_point, travel_time_min, distance_attribute='time'):
@@ -173,9 +184,16 @@ def write_coords_to_geojson(coords, travel_time_min, file_path):
         f.write("%s" % collection)
 
 
-def write_mean_spatial_distances_to_file(mean_spatial_distances, file_path):
+def write_mean_spatial_distances_to_file(mean_spatial_distances,
+                                         median_spatial_distances,
+                                         min_spatial_distances,
+                                         max_spatial_distances,
+                                         file_path):
     with open(file_path, "w") as f:
-        f.write("min distance " + str(min(mean_spatial_distances)) + " / max distance " + str(max(mean_spatial_distances)))
+        f.write("  mean distance min " + str(min(mean_spatial_distances)) + " / max " + str(max(mean_spatial_distances)))
+        f.write("median distance min " + str(min(median_spatial_distances)) + " / max " + str(max(median_spatial_distances)))
+        f.write("   min distance min " + str(min(min_spatial_distances)) + " / max " + str(max(min_spatial_distances)))
+        f.write("   max distance min " + str(min(max_spatial_distances)) + " / max " + str(max(max_spatial_distances)))
 
 
 #
@@ -225,9 +243,12 @@ for transport in MEANS_OF_TRANSPORT:
             # Generate points
             points_with_spatial_distance, \
             failed_points, \
-            mean_spatial_distances = get_points_with_spatial_distance(g=g,
-                                                                      points=sample_points,
-                                                                      travel_time_min=travel_time_min)
+            mean_spatial_distances, \
+            median_spatial_distances, \
+            min_spatial_distances, \
+            max_spatial_distances = get_points_with_spatial_distance(g=g,
+                                                                     points=sample_points,
+                                                                     travel_time_min=travel_time_min)
 
             # Write results to file
             write_coords_to_geojson(coords=points_with_spatial_distance,
@@ -237,6 +258,9 @@ for transport in MEANS_OF_TRANSPORT:
                                     travel_time_min=travel_time_min,
                                     file_path=result_file_name_base + "-failed.geojson")
             write_mean_spatial_distances_to_file(mean_spatial_distances=mean_spatial_distances,
+                                                 median_spatial_distances=median_spatial_distances,
+                                                 min_spatial_distances=min_spatial_distances,
+                                                 max_spatial_distances=max_spatial_distances,
                                                  file_path=result_file_name_base + "-distances.txt")
         else:
             print(">>> Exists " + transport + " in " + str(travel_time_min) + " minutes")
