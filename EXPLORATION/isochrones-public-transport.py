@@ -150,7 +150,7 @@ def get_spatial_distance(g, start_point, travel_time_min, distance_attribute='ti
         nodes, edges = get_possible_routes(g, start_point, travel_time_min, distance_attribute)
 
         # Debug subgraph
-        write_subgraph_to_geojson(nodes, edges, start_point, transport)
+        # write_subgraph_to_geojson(nodes, edges, start_point, transport)
 
         longitudes, latitudes = get_convex_hull(nodes)
         distances = get_distances(start_point, latitudes, longitudes)
@@ -243,11 +243,9 @@ def plot_graph(g):
 #
 
 PLACE_NAME = "Berlin, Germany"
-# TRAVEL_TIMES = [5, 10, 15]
-# MEANS_OF_TRANSPORT = ["all", "bike", "bus", "subway", "tram", "rail"]
-TRAVEL_TIMES = [15]
-MEANS_OF_TRANSPORT = ["tram"]
-OVERRIDE_RESULTS = True
+TRAVEL_TIMES = [40]
+MEANS_OF_TRANSPORT = ["tram", "subway", "rail", "bus", "bike", "all"]
+OVERRIDE_RESULTS = False
 
 # Load walk graph
 g_walk = load_graphml_from_file(file_path='tmp/walk.graphml',
@@ -258,7 +256,7 @@ g_walk = load_graphml_from_file(file_path='tmp/walk.graphml',
 g_walk = enhance_with_speed(g=g_walk, transport='walk')
 
 # Load sample points
-sample_points = load_sample_points(file_path="../results/sample-points-limited.csv")
+sample_points = load_sample_points(file_path="../results/sample-points.csv")
 
 # Iterate over means of transport
 for transport in MEANS_OF_TRANSPORT:
@@ -271,10 +269,6 @@ for transport in MEANS_OF_TRANSPORT:
 
     # Compose means of transport with walking
     g = nx.algorithms.operators.all.compose_all([g_transport, g_walk])
-
-    # print("DEBUG g_walk.edges " + str(len(g_walk.edges)))
-    # print("DEBUG g_transport.edges " + str(len(g_transport.edges)))
-    # print("DEBUG g.edges " + str(len(g.edges)))
 
     # Iterate over travel times
     for travel_time_min in TRAVEL_TIMES:
@@ -291,7 +285,7 @@ for transport in MEANS_OF_TRANSPORT:
             median_spatial_distances, \
             min_spatial_distances, \
             max_spatial_distances = get_points_with_spatial_distance(g=g,
-                                                                     points=sample_points,
+                                                                     points=sample_points[5000:],
                                                                      travel_time_min=travel_time_min,
                                                                      transport=transport)
 
