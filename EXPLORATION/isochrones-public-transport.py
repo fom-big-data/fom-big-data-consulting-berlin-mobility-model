@@ -94,7 +94,7 @@ def load_sample_points(file_path):
     return sample_points
 
 
-def get_points_with_spatial_distance(g, points, travel_time_min):
+def get_points_with_spatial_distance(g, points, travel_time_min, transport):
     points_with_spatial_distance = []
     failed_points = []
     mean_spatial_distances = []
@@ -112,7 +112,8 @@ def get_points_with_spatial_distance(g, points, travel_time_min):
         min_spatial_distance, \
         max_spatial_distance = get_spatial_distance(g=g,
                                                     start_point=start_point,
-                                                    travel_time_min=travel_time_min)
+                                                    travel_time_min=travel_time_min,
+                                                    transport=transport)
 
         nearest_node_id = ox.get_nearest_node(g, start_point)
         nearest_node = g.nodes[nearest_node_id]
@@ -143,10 +144,13 @@ def get_points_with_spatial_distance(g, points, travel_time_min):
            max_spatial_distances
 
 
-def get_spatial_distance(g, start_point, travel_time_min, distance_attribute='time'):
+def get_spatial_distance(g, start_point, travel_time_min, distance_attribute='time', transport=''):
     try:
         # print("OKAY " + str(start_point))
         nodes, edges = get_possible_routes(g, start_point, travel_time_min, distance_attribute)
+
+        # Debug subgraph
+        write_subgraph_to_geojson(nodes, edges, start_point, transport)
 
         longitudes, latitudes = get_convex_hull(nodes)
         distances = get_distances(start_point, latitudes, longitudes)
@@ -177,10 +181,42 @@ def write_coords_to_geojson(coords, travel_time_min, file_path):
         feature["geometry"] = {"type": "Point", "coordinates": [coord["lon"], coord["lat"]]}
         feature["type"] = "Feature"
         feature["properties"] = {
-            "mean_spatial_distance_" + str(travel_time_min) + "min": coord["mean_spatial_distance_" + str(travel_time_min) + "min"]}
+            "mean_spatial_distance_" + str(travel_time_min) + "min": coord["mean_spatial_distance_" + str(travel_time_min) + "min"],
+            "median_spatial_distance_" + str(travel_time_min) + "min": coord["median_spatial_distance_" + str(travel_time_min) + "min"],
+            "min_spatial_distance_" + str(travel_time_min) + "min": coord["min_spatial_distance_" + str(travel_time_min) + "min"],
+            "max_spatial_distance_" + str(travel_time_min) + "min": coord["max_spatial_distance_" + str(travel_time_min) + "min"],
+        }
         features.append(feature)
 
     collection = FeatureCollection(features)
+
+    with open(file_path, "w") as f:
+        f.write("%s" % collection)
+
+
+def write_subgraph_to_geojson(nodes, edges, start_point, transport):
+    features = []
+
+    feature = {}
+    feature["geometry"] = {"type": "Point", "coordinates": [start_point[0], start_point[1]]}
+    feature["type"] = "Feature"
+    features.append(feature)
+
+    for node in MultiPoint(nodes.reset_index()["geometry"]):
+        feature = {}
+        feature["geometry"] = {"type": "Point", "coordinates": [node.x, node.y]}
+        feature["type"] = "Feature"
+        features.append(feature)
+
+    for edge in edges["geometry"]:
+        feature = {}
+        feature["geometry"] = {"type": "LineString", "coordinates": [[edge.bounds[0], edge.bounds[1]], [edge.bounds[2], edge.bounds[3]]]}
+        feature["type"] = "Feature"
+        features.append(feature)
+
+    collection = FeatureCollection(features)
+
+    file_path = "../results/isochrones-" + transport + "-" + str(travel_time_min) + "-" + str(start_point[0]) + "-" + str(start_point[1]) + ".geojson"
 
     with open(file_path, "w") as f:
         f.write("%s" % collection)
@@ -198,16 +234,20 @@ def write_mean_spatial_distances_to_file(mean_spatial_distances,
         f.write("   max distance min " + str(min(max_spatial_distances)) + " / max " + str(max(max_spatial_distances)) + "\n")
 
 
+def plot_graph(g):
+    ox.plot_graph(g)
+
+
 #
 # Main
 #
 
 PLACE_NAME = "Berlin, Germany"
-TRAVEL_TIMES = [5, 10, 15]
-MEANS_OF_TRANSPORT = ["all", "bike", "bus", "subway", "tram", "rail"]
-
-# Load complete graph
-# g_all = load_graphml_from_file(file_path='tmp/all.graphml', place_name=PLACE_NAME, network_type='all')
+# TRAVEL_TIMES = [5, 10, 15]
+# MEANS_OF_TRANSPORT = ["all", "bike", "bus", "subway", "tram", "rail"]
+TRAVEL_TIMES = [15]
+MEANS_OF_TRANSPORT = ["tram"]
+OVERRIDE_RESULTS = True
 
 # Load walk graph
 g_walk = load_graphml_from_file(file_path='tmp/walk.graphml',
@@ -218,7 +258,7 @@ g_walk = load_graphml_from_file(file_path='tmp/walk.graphml',
 g_walk = enhance_with_speed(g=g_walk, transport='walk')
 
 # Load sample points
-sample_points = load_sample_points(file_path="../results/sample-points.csv")
+sample_points = load_sample_points(file_path="../results/sample-points-limited.csv")
 
 # Iterate over means of transport
 for transport in MEANS_OF_TRANSPORT:
@@ -232,12 +272,16 @@ for transport in MEANS_OF_TRANSPORT:
     # Compose means of transport with walking
     g = nx.algorithms.operators.all.compose_all([g_transport, g_walk])
 
+    # print("DEBUG g_walk.edges " + str(len(g_walk.edges)))
+    # print("DEBUG g_transport.edges " + str(len(g_transport.edges)))
+    # print("DEBUG g.edges " + str(len(g.edges)))
+
     # Iterate over travel times
     for travel_time_min in TRAVEL_TIMES:
 
         result_file_name_base = "../results/isochrones-" + transport + "-" + str(travel_time_min)
 
-        if not path.exists(result_file_name_base + ".geojson"):
+        if not path.exists(result_file_name_base + ".geojson") or OVERRIDE_RESULTS:
             print(">>> Analyze " + transport + " in " + str(travel_time_min) + " minutes")
 
             # Generate points
@@ -248,7 +292,8 @@ for transport in MEANS_OF_TRANSPORT:
             min_spatial_distances, \
             max_spatial_distances = get_points_with_spatial_distance(g=g,
                                                                      points=sample_points,
-                                                                     travel_time_min=travel_time_min)
+                                                                     travel_time_min=travel_time_min,
+                                                                     transport=transport)
 
             # Write results to file
             write_coords_to_geojson(coords=points_with_spatial_distance,
