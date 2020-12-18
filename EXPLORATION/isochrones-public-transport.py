@@ -58,14 +58,6 @@ def enhance_with_speed(g, time_attribute='time', transport=None):
         if (transport == 'walk'):
             speed = 6.0
         elif (transport == 'bus'):
-            # if ('maxspeed' in data.keys()):
-            #     if (isinstance(data['maxspeed'], list)):
-            #         speed = min(data['maxspeed'])
-            #     else:
-            #         speed = data['maxspeed']
-            #         speed = str(speed).strip(' mph')
-            # else:
-            #     speed = 50.0
             speed = 19.5
         elif (transport == 'bike'):
             speed = 16.0
@@ -161,9 +153,17 @@ def get_spatial_distance(g, start_point, travel_time_min, distance_attribute='ti
 
 
 def get_possible_routes(g, start_point, travel_time_min, distance_attribute):
-    center_node = ox.get_nearest_node(g, start_point)
-    subgraph = nx.ego_graph(g, center_node, radius=travel_time_min, distance=distance_attribute)
-    return ox.graph_to_gdfs(subgraph)
+    center_node, distance_to_station = ox.get_nearest_node(g, start_point, return_dist=True)
+
+    walking_speed = 6.0
+    walking_time = ((distance_to_station / 1000) / walking_speed) * 60
+    radius = travel_time_min - walking_time
+
+    if radius > 0:
+        subgraph = nx.ego_graph(g, center_node, radius=radius, distance=distance_attribute)
+        return ox.graph_to_gdfs(subgraph)
+    else:
+        return [], []
 
 
 def get_convex_hull(nodes):
@@ -202,21 +202,25 @@ def write_subgraph_to_geojson(nodes, edges, start_point, transport):
     feature["type"] = "Feature"
     features.append(feature)
 
-    for node in MultiPoint(nodes.reset_index()["geometry"]):
-        feature = {}
-        feature["geometry"] = {"type": "Point", "coordinates": [node.x, node.y]}
-        feature["type"] = "Feature"
-        features.append(feature)
+    # if len(nodes) > 0:
+    #     for node in MultiPoint(nodes.reset_index()["geometry"]):
+    #         feature = {}
+    #         feature["geometry"] = {"type": "Point", "coordinates": [node.x, node.y]}
+    #         feature["type"] = "Feature"
+    #         features.append(feature)
 
-    for edge in edges["geometry"]:
-        feature = {}
-        feature["geometry"] = {"type": "LineString", "coordinates": [[edge.bounds[0], edge.bounds[1]], [edge.bounds[2], edge.bounds[3]]]}
-        feature["type"] = "Feature"
-        features.append(feature)
+    if len(edges) > 0:
+        for edge in edges["geometry"]:
+            feature = {}
+            feature["geometry"] = {"type": "LineString",
+                                   "coordinates": [[edge.bounds[0], edge.bounds[1]], [edge.bounds[2], edge.bounds[3]]]}
+            feature["type"] = "Feature"
+            features.append(feature)
 
     collection = FeatureCollection(features)
 
-    file_path = "../results/isochrones-" + transport + "-" + str(travel_time_min) + "-" + str(start_point[0]) + "-" + str(start_point[1]) + ".geojson"
+    file_path = "../results/isochrones-" + transport + "-" + str(travel_time_min) + "-" + str(start_point[0]) + "-" + str(
+        start_point[1]) + ".geojson"
 
     with open(file_path, "w") as f:
         f.write("%s" % collection)
@@ -243,7 +247,7 @@ def plot_graph(g):
 #
 
 PLACE_NAME = "Berlin, Germany"
-TRAVEL_TIMES = [40]
+TRAVEL_TIMES = [20, 40, 60]
 MEANS_OF_TRANSPORT = ["tram", "subway", "rail", "bus", "bike", "all"]
 OVERRIDE_RESULTS = False
 
@@ -267,9 +271,6 @@ for transport in MEANS_OF_TRANSPORT:
     # Enhance graph with speed
     g_transport = enhance_with_speed(g=g_transport, transport=transport)
 
-    # Compose means of transport with walking
-    g = nx.algorithms.operators.all.compose_all([g_transport, g_walk])
-
     # Iterate over travel times
     for travel_time_min in TRAVEL_TIMES:
 
@@ -284,8 +285,8 @@ for transport in MEANS_OF_TRANSPORT:
             mean_spatial_distances, \
             median_spatial_distances, \
             min_spatial_distances, \
-            max_spatial_distances = get_points_with_spatial_distance(g=g,
-                                                                     points=sample_points[5000:],
+            max_spatial_distances = get_points_with_spatial_distance(g=g_transport,
+                                                                     points=sample_points,
                                                                      travel_time_min=travel_time_min,
                                                                      transport=transport)
 
