@@ -11,11 +11,11 @@
       ],
       [
         "get",
-        "mean_spatial_distance_15min"
+        "mean_spatial_distance_40min"
       ],
-      186,
+      4000,
       "rgba(255,50,50,0.2)",
-      10629,
+      21500,
       "rgba(50,255,50,0.2)"
     ],
     "circle-stroke-color": "transparent",

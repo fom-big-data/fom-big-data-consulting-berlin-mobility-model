@@ -13,9 +13,9 @@
         "get",
         "mean_spatial_distance_40min"
       ],
-      3522,
+      4000,
       "rgba(255,50,50,0.2)",
-      5716,
+      21500,
       "rgba(50,255,50,0.2)"
     ],
     "circle-stroke-color": "transparent",

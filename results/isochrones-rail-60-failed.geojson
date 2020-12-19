@@ -1,0 +1,1 @@
+{"features": [{"geometry": {"coordinates": ["13.112820153380968", "52.45863686444736"], "type": "Point"}, "properties": {"max_spatial_distance_60min": 0, "mean_spatial_distance_60min": 0, "median_spatial_distance_60min": 0, "min_spatial_distance_60min": 0}, "type": "Feature"}], "type": "FeatureCollection"}
