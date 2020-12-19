@@ -86,7 +86,7 @@ def load_sample_points(file_path):
     return sample_points
 
 
-def get_points_with_spatial_distance(g, points, travel_time_min, transport):
+def get_points_with_spatial_distance(g, points, travel_time_minuntes, transport):
     points_with_spatial_distance = []
     failed_points = []
     mean_spatial_distances = []
@@ -104,19 +104,19 @@ def get_points_with_spatial_distance(g, points, travel_time_min, transport):
         min_spatial_distance, \
         max_spatial_distance = get_spatial_distance(g=g,
                                                     start_point=start_point,
-                                                    travel_time_min=travel_time_min,
+                                                    travel_time_minutes=travel_time_minuntes,
                                                     transport=transport)
 
         nearest_node_id = ox.get_nearest_node(g, start_point)
         nearest_node = g.nodes[nearest_node_id]
 
         point_with_spatial_distance = {
-            "lon": nearest_node["x"],
-            "lat": nearest_node["y"],
-            "mean_spatial_distance_" + str(travel_time_min) + "min": mean_spatial_distance,
-            "median_spatial_distance_" + str(travel_time_min) + "min": median_spatial_distance,
-            "min_spatial_distance_" + str(travel_time_min) + "min": min_spatial_distance,
-            "max_spatial_distance_" + str(travel_time_min) + "min": max_spatial_distance
+            "lon": point["lon"],
+            "lat": point["lat"],
+            "mean_spatial_distance_" + str(travel_time_minuntes) + "min": mean_spatial_distance,
+            "median_spatial_distance_" + str(travel_time_minuntes) + "min": median_spatial_distance,
+            "min_spatial_distance_" + str(travel_time_minuntes) + "min": min_spatial_distance,
+            "max_spatial_distance_" + str(travel_time_minuntes) + "min": max_spatial_distance
         }
 
         if mean_spatial_distance > 0:
@@ -136,34 +136,45 @@ def get_points_with_spatial_distance(g, points, travel_time_min, transport):
            max_spatial_distances
 
 
-def get_spatial_distance(g, start_point, travel_time_min, distance_attribute='time', transport=''):
+def get_spatial_distance(g, start_point, travel_time_minutes, distance_attribute='time', transport=''):
+    walking_distance_meters = 0
+
     try:
-        # print("OKAY " + str(start_point))
-        nodes, edges = get_possible_routes(g, start_point, travel_time_min, distance_attribute)
+        nodes, edges, walking_distance_meters = get_possible_routes(g,
+                                                                    start_point,
+                                                                    travel_time_minutes,
+                                                                    distance_attribute)
 
         # Debug subgraph
         # write_subgraph_to_geojson(nodes, edges, start_point, transport)
 
         longitudes, latitudes = get_convex_hull(nodes)
-        distances = get_distances(start_point, latitudes, longitudes)
-        return np.mean(distances), np.median(distances), np.min(distances), np.max(distances)
+        transport_distances_meters = get_distances(start_point, latitudes, longitudes)
+        return np.mean(transport_distances_meters) + walking_distance_meters, \
+               np.median(transport_distances_meters) + walking_distance_meters, \
+               np.min(transport_distances_meters) + walking_distance_meters, \
+               np.max(transport_distances_meters) + walking_distance_meters
     except:
-        # print("FAIL " + str(start_point))
-        return 0, 0, 0, 0
+        return walking_distance_meters, walking_distance_meters, walking_distance_meters, walking_distance_meters
 
 
-def get_possible_routes(g, start_point, travel_time_min, distance_attribute):
-    center_node, distance_to_station = ox.get_nearest_node(g, start_point, return_dist=True)
+def get_possible_routes(g, start_point, travel_time_minutes, distance_attribute):
+    center_node, distance_to_station_meters = ox.get_nearest_node(g, start_point, return_dist=True)
 
-    walking_speed = 6.0
-    walking_time = ((distance_to_station / 1000) / walking_speed) * 60
-    radius = travel_time_min - walking_time
+    walking_speed_meters_per_minute = 100
+    walking_time_minutes = distance_to_station_meters / walking_speed_meters_per_minute
+
+    walking_time_minutes_max = walking_time_minutes if walking_time_minutes < travel_time_minutes else travel_time_minutes
+    walking_distance_meters = walking_time_minutes_max * walking_speed_meters_per_minute
+
+    radius = travel_time_minutes - walking_time_minutes
 
     if radius > 0:
         subgraph = nx.ego_graph(g, center_node, radius=radius, distance=distance_attribute)
-        return ox.graph_to_gdfs(subgraph)
+        nodes, edges = ox.graph_to_gdfs(subgraph)
+        return nodes, edges, walking_distance_meters
     else:
-        return [], []
+        return [], [], walking_distance_meters
 
 
 def get_convex_hull(nodes):
@@ -219,7 +230,7 @@ def write_subgraph_to_geojson(nodes, edges, start_point, transport):
 
     collection = FeatureCollection(features)
 
-    file_path = "../results/isochrones-" + transport + "-" + str(travel_time_min) + "-" + str(start_point[0]) + "-" + str(
+    file_path = "../results/isochrones-" + transport + "-" + str(travel_time_minutes) + "-" + str(start_point[0]) + "-" + str(
         start_point[1]) + ".geojson"
 
     with open(file_path, "w") as f:
@@ -247,7 +258,7 @@ def plot_graph(g):
 #
 
 PLACE_NAME = "Berlin, Germany"
-TRAVEL_TIMES = [20, 40, 60]
+TRAVEL_TIMES_MINUTES = [20, 40, 60]
 MEANS_OF_TRANSPORT = ["tram", "subway", "rail", "bus", "bike", "all"]
 OVERRIDE_RESULTS = False
 
@@ -272,12 +283,12 @@ for transport in MEANS_OF_TRANSPORT:
     g_transport = enhance_with_speed(g=g_transport, transport=transport)
 
     # Iterate over travel times
-    for travel_time_min in TRAVEL_TIMES:
+    for travel_time_minutes in TRAVEL_TIMES_MINUTES:
 
-        result_file_name_base = "../results/isochrones-" + transport + "-" + str(travel_time_min)
+        result_file_name_base = "../results/isochrones-" + transport + "-" + str(travel_time_minutes)
 
         if not path.exists(result_file_name_base + ".geojson") or OVERRIDE_RESULTS:
-            print(">>> Analyze " + transport + " in " + str(travel_time_min) + " minutes")
+            print(">>> Analyze " + transport + " in " + str(travel_time_minutes) + " minutes")
 
             # Generate points
             points_with_spatial_distance, \
@@ -287,15 +298,15 @@ for transport in MEANS_OF_TRANSPORT:
             min_spatial_distances, \
             max_spatial_distances = get_points_with_spatial_distance(g=g_transport,
                                                                      points=sample_points,
-                                                                     travel_time_min=travel_time_min,
+                                                                     travel_time_minuntes=travel_time_minutes,
                                                                      transport=transport)
 
             # Write results to file
             write_coords_to_geojson(coords=points_with_spatial_distance,
-                                    travel_time_min=travel_time_min,
+                                    travel_time_min=travel_time_minutes,
                                     file_path=result_file_name_base + ".geojson")
             write_coords_to_geojson(coords=failed_points,
-                                    travel_time_min=travel_time_min,
+                                    travel_time_min=travel_time_minutes,
                                     file_path=result_file_name_base + "-failed.geojson")
             write_mean_spatial_distances_to_file(mean_spatial_distances=mean_spatial_distances,
                                                  median_spatial_distances=median_spatial_distances,
@@ -303,6 +314,6 @@ for transport in MEANS_OF_TRANSPORT:
                                                  max_spatial_distances=max_spatial_distances,
                                                  file_path=result_file_name_base + "-distances.txt")
         else:
-            print(">>> Exists " + transport + " in " + str(travel_time_min) + " minutes")
+            print(">>> Exists " + transport + " in " + str(travel_time_minutes) + " minutes")
 
 print("Complete!")
