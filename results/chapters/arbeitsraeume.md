@@ -1,7 +1,6 @@
 ### Arbeitsräume
 
-Die Anders als andere Städte hat Berlin kein klassisches Stadtzentrum, welches auch kommerzielles Zentrum der Stadt fungiert. Daher stellt
- sich im Rahmen des Pendlerverkehrs die Frage, welche Zielorte von besonderer Wichtigkeit für die urbane Mobilität sind. Durch eine
-  Visualisierung des Flächennutzungsplans wird deutlich, dass auch sogenannte Handels- und Dienstleistungszentren dezentral über die
-   Stadt verteilt sind. Zusammen mit den Lebensräumen bilden die Ansammlungen von Arbeitsräumen (Büros, etc.) wichtige Ausgangspunkte für
-    unsere Analyse des städtischen Verkehrs.
+Neben den Lebensräumen der Menschen, stellen der Arbeitsplatz, Freizeitaktivitäten und Einkaufsmöglichkeiten wichtige 
+Eckpfeiler der urbanen Mobilität dar. Durch eine Visualisierung des Flächennutzungsplans wird deutlich, dass auch 
+sogenannte Handels- und Dienstleistungszentren dezentral über die Stadt verteilt sind. HIER BESCHREIBEN WAS AUF DER
+KARTE ZU SEHEN IST
