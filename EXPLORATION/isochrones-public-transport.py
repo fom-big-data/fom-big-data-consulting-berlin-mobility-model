@@ -45,9 +45,12 @@ def get_means_of_transport_graph(transport):
                                       place_name=PLACE_NAME,
                                       custom_filter='["bus"="yes"]')
     elif transport == "subway" or transport == "tram" or transport == "rail":
-        return load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
+        g_transport =  load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                       place_name=PLACE_NAME,
                                       custom_filter='["railway"~"' + transport + '"]')
+
+        write_node_to_geojson(g_transport, "stations-" + transport + ".geojson")
+        return g_transport
 
 
 def enhance_with_speed(g, time_attribute='time', transport=None):
@@ -200,6 +203,26 @@ def write_coords_to_geojson(coords, travel_time_min, file_path):
 
     with open(file_path, "w") as f:
         f.write("%s" % collection)
+
+
+def write_node_to_geojson(g, file_name):
+    if not path.exists("../results/" + file_name):
+        features = []
+
+        if len(g.nodes) > 0:
+            for node_id in g.nodes:
+                node = g.nodes[node_id]
+                feature = {}
+                feature["geometry"] = {"type": "Point", "coordinates": [node["x"], node["y"]]}
+                feature["type"] = "Feature"
+                features.append(feature)
+
+        collection = FeatureCollection(features)
+
+        file_path = "../results/" + file_name
+
+        with open(file_path, "w") as f:
+            f.write("%s" % collection)
 
 
 def write_subgraph_to_geojson(nodes, edges, start_point, transport):
