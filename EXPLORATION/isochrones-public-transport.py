@@ -23,7 +23,7 @@ def load_graphml_from_file(file_path, place_name, network_type=None, custom_filt
 
 
 def load_graphml(place_name, network_type=None, custom_filter=None):
-    return ox.graph.graph_from_place(place_name=place_name,
+    return ox.graph.graph_from_place(query=place_name,
                                      retain_all=False,
                                      buffer_dist=2500,
                                      network_type=network_type,
@@ -106,9 +106,6 @@ def get_points_with_spatial_distance(g, points, travel_time_minuntes, transport)
                                                     start_point=start_point,
                                                     travel_time_minutes=travel_time_minuntes,
                                                     transport=transport)
-
-        nearest_node_id = ox.get_nearest_node(g, start_point)
-        nearest_node = g.nodes[nearest_node_id]
 
         point_with_spatial_distance = {
             "lon": point["lon"],
