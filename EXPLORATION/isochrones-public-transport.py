@@ -78,15 +78,31 @@ def enhance_graph_with_speed(g, time_attribute='time', transport=None):
 
 
 def compose_graphs(file_path, g_a, g_b, connect_a_to_b=False):
+    """
+    Composes two graphs into one
+
+    Parameters
+    ----------
+    :param g_a : MultiDiGraph First graph.
+    :param g_b : MultiDiGraph Second graph.
+    :param connect_a_to_b : bool If true, each node of first graph will be connected to the closest node of the second graph via an edge
+    :return composed graph
+    """
     g = nx.algorithms.operators.all.compose_all([g_a, g_b])
 
     if connect_a_to_b:
         a_nodes, a_edges = ox.graph_to_gdfs(g_a)
         b_nodes, b_edges = ox.graph_to_gdfs(g_b)
 
+        # Iterate over all nodes of first graph
         for a_node_id in a_nodes["osmid"]:
+            # Get coordinates of node
             a_nodes_point = g_a.nodes[a_node_id]
+
+            # Get node in second graph that is closest to node in first graph
             b_node_id, distance = ox.get_nearest_node(g_b, (a_nodes_point["y"], a_nodes_point["x"]), return_dist=True)
+
+            # Add edges in both directions
             g.add_edge(a_node_id, b_node_id,
                        osmid=0,
                        name="Way from station",
@@ -104,6 +120,7 @@ def compose_graphs(file_path, g_a, g_b, connect_a_to_b=False):
                        length=0,
                        time=0)
 
+    ox.save_graphml(g, file_path)
     return g
 
 
