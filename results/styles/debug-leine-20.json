@@ -1,0 +1,11 @@
+{
+  "id": "stations-rail-layer",
+  "type": "circle",
+  "source": "stations-rail",
+  "paint": {
+    "circle-radius": 1,
+    "circle-color": "lightcoral",
+    "circle-stroke-color": "transparent",
+    "circle-stroke-width": 1
+  }
+}

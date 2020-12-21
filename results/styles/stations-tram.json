@@ -1,0 +1,11 @@
+{
+  "id": "stations-tram-layer",
+  "type": "circle",
+  "source": "stations-tram",
+  "paint": {
+    "circle-radius": 4,
+    "circle-color": "#E02B25",
+    "circle-stroke-color": "transparent",
+    "circle-stroke-width": 1
+  }
+}
