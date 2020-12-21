@@ -4,7 +4,7 @@
   "source": "stations-rail",
   "paint": {
     "circle-radius": 2,
-    "circle-color": "#red",
+    "circle-color": "red",
     "circle-stroke-color": "transparent",
     "circle-stroke-width": 1
   }
