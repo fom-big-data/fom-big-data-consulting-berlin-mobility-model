@@ -280,8 +280,8 @@ def plot_graph(g):
 #
 
 PLACE_NAME = "Berlin, Germany"
-TRAVEL_TIMES_MINUTES = [20, 40, 60]
-MEANS_OF_TRANSPORT = ["tram", "subway", "rail", "bus", "bike", "all"]
+TRAVEL_TIMES_MINUTES = [20]
+MEANS_OF_TRANSPORT = ["subway"]
 OVERRIDE_RESULTS = False
 
 # Load walk graph
@@ -289,11 +289,13 @@ g_walk = load_graphml_from_file(file_path='tmp/walk.graphml',
                                 place_name=PLACE_NAME,
                                 network_type='walk')
 
+g_walk_nodes, g_walk_edges = ox.graph_to_gdfs(g_walk)
+
 # Enhance graph with speed
 g_walk = enhance_graph_with_speed(g=g_walk, transport='walk')
 
 # Load sample points
-sample_points = load_sample_points(file_path="../results/sample-points.csv")
+sample_points = load_sample_points(file_path="../results/sample-points-debug.csv")
 
 # Iterate over means of transport
 for transport in MEANS_OF_TRANSPORT:
@@ -307,10 +309,18 @@ for transport in MEANS_OF_TRANSPORT:
     # Compose transport graph and walk graph
     g = compose_graphs("tmp/" + transport + "+walk.graphml", g_transport, g_walk, connect_a_to_b=True)
 
+    g_walk_nodes, g_walk_edges = ox.graph_to_gdfs(g_walk)
+    g_transport_nodes, g_transport_edges = ox.graph_to_gdfs(g_transport)
+    g_nodes, g_edges = ox.graph_to_gdfs(g)
+
+    print("g_walk_edges " + str(len(g_walk_edges)))
+    print("g_transport_edges " + str(len(g_transport_edges)))
+    print("g_edges " + str(len(g_edges)))
+
     # Iterate over travel times
     for travel_time_minutes in TRAVEL_TIMES_MINUTES:
 
-        result_file_name_base = "../results/isochrones-" + transport + "-" + str(travel_time_minutes)
+        result_file_name_base = "../results/isochrones-debug-6-" + transport + "-" + str(travel_time_minutes)
 
         if not path.exists(result_file_name_base + ".geojson") or OVERRIDE_RESULTS:
             print(">>> Analyze " + transport + " in " + str(travel_time_minutes) + " minutes")
