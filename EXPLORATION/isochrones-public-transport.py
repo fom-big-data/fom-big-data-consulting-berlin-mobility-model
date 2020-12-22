@@ -24,6 +24,7 @@ def load_graphml_from_file(file_path, place_name, network_type=None, custom_filt
 
 def load_graphml(place_name, network_type=None, custom_filter=None):
     return ox.graph.graph_from_place(query=place_name,
+                                     simplify=False,
                                      retain_all=False,
                                      buffer_dist=2500,
                                      network_type=network_type,
