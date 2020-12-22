@@ -1,2 +1,9 @@
+tqdm
+shapely
+geojson
+geopy
+networkx
+numpy
+osmnx
 firebase-admin==4.4.0
 pandas==0.25.1
