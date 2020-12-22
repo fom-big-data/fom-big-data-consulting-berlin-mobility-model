@@ -298,8 +298,8 @@ def plot_graph(g):
 #
 
 PLACE_NAME = "Berlin, Germany"
-TRAVEL_TIMES_MINUTES = [20, 40, 60]
-MEANS_OF_TRANSPORT = ["tram", "subway", "rail", "bus", "bike", "all"]
+TRAVEL_TIMES_MINUTES = [15]
+MEANS_OF_TRANSPORT = ["all", "tram", "subway", "rail", "bus", "bike"]
 OVERRIDE_RESULTS = False
 
 # Load walk graph
