@@ -1,4 +1,0 @@
-  mean distance min 6000 / max 24748.019544814946
-median distance min 6000 / max 30035.25063892568
-   min distance min 1161.0304318245774 / max 22406.151018542736
-   max distance min 6000 / max 35268.323779715516
