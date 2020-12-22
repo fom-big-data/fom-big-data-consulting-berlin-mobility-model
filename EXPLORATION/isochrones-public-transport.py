@@ -19,6 +19,7 @@ def load_graphml_from_file(file_path, place_name, network_type=None, custom_filt
         ox.save_graphml(graph, file_path)
         return graph
     else:
+        print("Load " + file_path)
         return ox.io.load_graphml(file_path)
 
 
@@ -96,7 +97,10 @@ def compose_graphs(file_path, g_a, g_b, connect_a_to_b=False):
         b_nodes, b_edges = ox.graph_to_gdfs(g_b)
 
         # Iterate over all nodes of first graph
-        for a_node_id in a_nodes["osmid"]:
+        for key, a_node_id in tqdm(iterable=a_nodes["osmid"].items(),
+                                   desc="Compose graphs",
+                                   total=len(a_nodes),
+                                   unit="point"):
             # Get coordinates of node
             a_nodes_point = g_a.nodes[a_node_id]
 
@@ -145,8 +149,10 @@ def get_points_with_spatial_distance(g, points, travel_time_minuntes, transport)
     min_spatial_distances = []
     max_spatial_distances = []
 
-    progress_bar = tqdm(iterable=range(len(points)), unit="points", desc="Evaluate points")
-    for point_index in progress_bar:
+    for point_index in tqdm(iterable=range(len(points)),
+                            total=len(points),
+                            desc="Evaluate points",
+                            unit="point", ):
         point = points[point_index]
         start_point = (float(point["lat"]), float(point["lon"]))
 
