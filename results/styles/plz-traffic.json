@@ -1,7 +1,7 @@
 {
-  "id": "berlin-inhabitants-layer",
+  "id": "plz-traffic-layer",
   "type": "fill",
-  "source": "berlin-inhabitants",
+  "source": "plz-traffic",
   "layout": {},
   "paint": {
     "fill-color": [
@@ -25,7 +25,7 @@
       ],
       [
         "get",
-        "einwohner"
+        "relative_real_speed"
       ],
       0.5,
       "rgba(255, 100, 50, 1.0)",
