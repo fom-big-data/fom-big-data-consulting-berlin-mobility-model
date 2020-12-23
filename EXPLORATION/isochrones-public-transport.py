@@ -32,27 +32,39 @@ def load_graphml(place_name, network_type=None, custom_filter=None):
                                      custom_filter=custom_filter)
 
 
-def get_means_of_transport_graph(transport):
+def get_means_of_transport_graph(transport, enhance_with_speed=False):
     if transport == "all":
         return nx.algorithms.operators.all.compose_all([get_means_of_transport_graph("bus"),
                                                         get_means_of_transport_graph("subway"),
                                                         get_means_of_transport_graph("tram"),
                                                         get_means_of_transport_graph("rail")])
-    if transport == "bike":
-        return load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
-                                      place_name=PLACE_NAME,
-                                      network_type='bike')
-    if transport == "bus":
-        return load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
-                                      place_name=PLACE_NAME,
-                                      custom_filter='["bus"="yes"]')
-    elif transport == "subway" or transport == "tram" or transport == "rail":
-        g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
-                                             place_name=PLACE_NAME,
-                                             custom_filter='["railway"~"' + transport + '"]')
+    else:
+        g_transport = None
 
-        write_nodes_to_geojson(g_transport, "stations-" + transport + ".geojson")
-        return g_transport
+        if transport == "walk":
+            g_transport = load_graphml_from_file(file_path='tmp/walk.graphml',
+                                                 place_name=PLACE_NAME,
+                                                 network_type='walk')
+        elif transport == "bike":
+            g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
+                                                 place_name=PLACE_NAME,
+                                                 network_type='bike')
+        elif transport == "bus":
+            g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
+                                                 place_name=PLACE_NAME,
+                                                 custom_filter='["bus"="yes"]')
+        elif transport == "subway" or transport == "tram" or transport == "rail":
+            g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
+                                                 place_name=PLACE_NAME,
+                                                 custom_filter='["railway"~"' + transport + '"]')
+
+            # Writes nodes of nets to
+            write_nodes_to_geojson(file_path="../results/stations-" + transport + ".geojson", g=g_transport)
+
+        if enhance_with_speed:
+            return enhance_graph_with_speed(g=g_transport, transport=transport)
+        else:
+            return g_transport
 
 
 def enhance_graph_with_speed(g, time_attribute='time', transport=None):
@@ -264,30 +276,33 @@ def write_coords_to_geojson(coords, travel_time_min, file_path):
         f.write("%s" % collection)
 
 
-def write_nodes_to_geojson(g, file_name):
-    features = []
+def write_nodes_to_geojson(file_path, g):
+    if not path.exists:
+        print("Save " + file_path)
 
-    if len(g.nodes) > 0:
-        for node_id in g.nodes:
-            node = g.nodes[node_id]
-            feature = {}
-            feature["geometry"] = {"type": "Point", "coordinates": [node["x"], node["y"]]}
-            feature["type"] = "Feature"
-            features.append(feature)
+        features = []
 
-    collection = FeatureCollection(features)
+        if len(g.nodes) > 0:
+            for node_id in g.nodes:
+                node = g.nodes[node_id]
+                feature = {}
+                feature["geometry"] = {"type": "Point", "coordinates": [node["x"], node["y"]]}
+                feature["type"] = "Feature"
+                features.append(feature)
 
-    file_path = "../results/" + file_name
+        collection = FeatureCollection(features)
 
-    with open(file_path, "w") as f:
-        f.write("%s" % collection)
+        with open(file_path, "w") as f:
+            f.write("%s" % collection)
+    else:
+        print("Exists " + file_path)
 
 
-def write_spatial_distances_to_file(mean_spatial_distances,
+def write_spatial_distances_to_file(file_path,
+                                    mean_spatial_distances,
                                     median_spatial_distances,
                                     min_spatial_distances,
-                                    max_spatial_distances,
-                                    file_path):
+                                    max_spatial_distances):
     with open(file_path, "w") as f:
         f.write("  mean distance min " + str(min(mean_spatial_distances)) + " / max " + str(max(mean_spatial_distances)) + "\n")
         f.write("median distance min " + str(min(median_spatial_distances)) + " / max " + str(max(median_spatial_distances)) + "\n")
@@ -309,12 +324,7 @@ MEANS_OF_TRANSPORT = ["all", "tram", "subway", "rail", "bus", "bike"]
 OVERRIDE_RESULTS = False
 
 # Load walk graph
-g_walk = load_graphml_from_file(file_path='tmp/walk.graphml',
-                                place_name=PLACE_NAME,
-                                network_type='walk')
-
-# Enhance graph with speed
-g_walk = enhance_graph_with_speed(g=g_walk, transport='walk')
+g_walk = get_means_of_transport_graph(transport="walk", enhance_with_speed=True)
 
 # Load sample points
 sample_points = load_sample_points(file_path="../results/sample-points.csv")
@@ -323,10 +333,7 @@ sample_points = load_sample_points(file_path="../results/sample-points.csv")
 for transport in MEANS_OF_TRANSPORT:
 
     # Get graph for means of transport
-    g_transport = get_means_of_transport_graph(transport=transport)
-
-    # Enhance graph with speed
-    g_transport = enhance_graph_with_speed(g=g_transport, transport=transport)
+    g_transport = get_means_of_transport_graph(transport=transport, enhance_with_speed=True)
 
     # Compose transport graph and walk graph
     g = compose_graphs("tmp/" + transport + "+walk.graphml", g_transport, g_walk, connect_a_to_b=True)
@@ -335,6 +342,8 @@ for transport in MEANS_OF_TRANSPORT:
     for travel_time_minutes in TRAVEL_TIMES_MINUTES:
 
         result_file_name_base = "../results/isochrones-" + transport + "-" + str(travel_time_minutes)
+        result_file_name_base_failed = "../results/failed/isochrones-" + transport + "-" + str(travel_time_minutes)
+        result_file_name_base_distances = "../results/distances/isochrones-" + transport + "-" + str(travel_time_minutes)
 
         if not path.exists(result_file_name_base + ".geojson") or OVERRIDE_RESULTS:
             print(">>> Analyze " + transport + " in " + str(travel_time_minutes) + " minutes")
@@ -351,17 +360,17 @@ for transport in MEANS_OF_TRANSPORT:
                                                                      transport=transport)
 
             # Write results to file
-            write_coords_to_geojson(coords=points_with_spatial_distance,
-                                    travel_time_min=travel_time_minutes,
-                                    file_path=result_file_name_base + ".geojson")
-            write_coords_to_geojson(coords=failed_points,
-                                    travel_time_min=travel_time_minutes,
-                                    file_path=result_file_name_base + "-failed.geojson")
-            write_spatial_distances_to_file(mean_spatial_distances=mean_spatial_distances,
+            write_coords_to_geojson(file_path=result_file_name_base + ".geojson",
+                                    coords=points_with_spatial_distance,
+                                    travel_time_min=travel_time_minutes)
+            write_coords_to_geojson(file_path=result_file_name_base_failed + "-failed.geojson",
+                                    coords=failed_points,
+                                    travel_time_min=travel_time_minutes)
+            write_spatial_distances_to_file(file_path=result_file_name_base_distances + "-distances.txt",
+                                            mean_spatial_distances=mean_spatial_distances,
                                             median_spatial_distances=median_spatial_distances,
                                             min_spatial_distances=min_spatial_distances,
-                                            max_spatial_distances=max_spatial_distances,
-                                            file_path=result_file_name_base + "-distances.txt")
+                                            max_spatial_distances=max_spatial_distances)
         else:
             print(">>> Exists " + transport + " in " + str(travel_time_minutes) + " minutes")
 
