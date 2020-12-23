@@ -25,7 +25,7 @@ def load_graphml_from_file(file_path, place_name, network_type=None, custom_filt
 
 def load_graphml(place_name, network_type=None, custom_filter=None):
     return ox.graph.graph_from_place(query=place_name,
-                                     simplify=False,
+                                     simplify=True,
                                      retain_all=False,
                                      buffer_dist=2500,
                                      network_type=network_type,
@@ -34,10 +34,10 @@ def load_graphml(place_name, network_type=None, custom_filter=None):
 
 def get_means_of_transport_graph(transport, enhance_with_speed=False):
     if transport == "all":
-        return nx.algorithms.operators.all.compose_all([get_means_of_transport_graph("bus"),
-                                                        get_means_of_transport_graph("subway"),
-                                                        get_means_of_transport_graph("tram"),
-                                                        get_means_of_transport_graph("rail")])
+        return nx.algorithms.operators.all.compose_all([get_means_of_transport_graph(transport="bus", enhance_with_speed=True),
+                                                        get_means_of_transport_graph(transport="subway", enhance_with_speed=True),
+                                                        get_means_of_transport_graph(transport="tram", enhance_with_speed=True),
+                                                        get_means_of_transport_graph(transport="light_rail", enhance_with_speed=True)])
     else:
         g_transport = None
 
@@ -52,13 +52,21 @@ def get_means_of_transport_graph(transport, enhance_with_speed=False):
         elif transport == "bus":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
-                                                 custom_filter='["bus"="yes"]')
-        elif transport == "subway" or transport == "tram" or transport == "rail":
+                                                 custom_filter='["highway"~"secondary|tertiary|bus_stop"]')
+        elif transport == "light_rail":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
-                                                 custom_filter='["railway"~"' + transport + '"]')
+                                                 custom_filter='["railway"~"light_rail|station"]["railway"!="service_station"]["station"!="subway"]')
+        elif transport == "subway":
+            g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
+                                                 place_name=PLACE_NAME,
+                                                 custom_filter='["railway"~"subway|station"]["railway"!="subway_entrance"]["railway"!="service_station"]["station"!="light_rail"]["service"!="yard"]')
+        elif transport == "tram":
+            g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
+                                                 place_name=PLACE_NAME,
+                                                 custom_filter='["railway"~"tram|station"]["train"!="yes"]["station"!="subway"]["station"!="light_rail"]')
 
-            # Writes nodes of nets to
+        if transport in ["bus", "light_rail", "subway", "tram"]:
             write_nodes_to_geojson(file_path="../results/stations-" + transport + ".geojson", g=g_transport)
 
         if enhance_with_speed:
@@ -153,7 +161,7 @@ def load_sample_points(file_path):
     return sample_points
 
 
-def get_points_with_spatial_distance(g, points, travel_time_minuntes, transport):
+def get_points_with_spatial_distance(g, points, travel_time_minutes, transport):
     points_with_spatial_distance = []
     failed_points = []
     mean_spatial_distances = []
@@ -173,16 +181,16 @@ def get_points_with_spatial_distance(g, points, travel_time_minuntes, transport)
         min_spatial_distance, \
         max_spatial_distance = get_spatial_distance(g=g,
                                                     start_point=start_point,
-                                                    travel_time_minutes=travel_time_minuntes,
+                                                    travel_time_minutes=travel_time_minutes,
                                                     transport=transport)
 
         point_with_spatial_distance = {
             "lon": point["lon"],
             "lat": point["lat"],
-            "mean_spatial_distance_" + str(travel_time_minuntes) + "min": mean_spatial_distance,
-            "median_spatial_distance_" + str(travel_time_minuntes) + "min": median_spatial_distance,
-            "min_spatial_distance_" + str(travel_time_minuntes) + "min": min_spatial_distance,
-            "max_spatial_distance_" + str(travel_time_minuntes) + "min": max_spatial_distance
+            "mean_spatial_distance_" + str(travel_time_minutes) + "min": mean_spatial_distance,
+            "median_spatial_distance_" + str(travel_time_minutes) + "min": median_spatial_distance,
+            "min_spatial_distance_" + str(travel_time_minutes) + "min": min_spatial_distance,
+            "max_spatial_distance_" + str(travel_time_minutes) + "min": max_spatial_distance
         }
 
         if mean_spatial_distance > 0:
@@ -202,7 +210,7 @@ def get_points_with_spatial_distance(g, points, travel_time_minuntes, transport)
            max_spatial_distances
 
 
-def get_spatial_distance(g, start_point, travel_time_minutes, distance_attribute='time', transport=''):
+def get_spatial_distance(g, start_point, travel_time_minutes, distance_attribute='time'):
     walking_distance_meters = 0
 
     try:
@@ -256,7 +264,7 @@ def get_distances(start_point, latitudes, longitudes):
     return [geopy.distance.geodesic(point, start_point).meters for point in zip(latitudes, longitudes)]
 
 
-def write_coords_to_geojson(coords, travel_time_min, file_path):
+def write_coords_to_geojson(file_path, coords, travel_time_min):
     features = []
     for coord in coords:
         feature = {}
@@ -277,7 +285,7 @@ def write_coords_to_geojson(coords, travel_time_min, file_path):
 
 
 def write_nodes_to_geojson(file_path, g):
-    if not path.exists:
+    if not path.exists(file_path):
         print("Save " + file_path)
 
         features = []
@@ -320,7 +328,7 @@ def plot_graph(g):
 
 PLACE_NAME = "Berlin, Germany"
 TRAVEL_TIMES_MINUTES = [15]
-MEANS_OF_TRANSPORT = ["all", "tram", "subway", "rail", "bus", "bike"]
+MEANS_OF_TRANSPORT = ["all", "bus", "light_rail", "subway", "tram", "bike"]
 OVERRIDE_RESULTS = False
 
 # Load walk graph
@@ -356,7 +364,7 @@ for transport in MEANS_OF_TRANSPORT:
             min_spatial_distances, \
             max_spatial_distances = get_points_with_spatial_distance(g=g,
                                                                      points=sample_points,
-                                                                     travel_time_minuntes=travel_time_minutes,
+                                                                     travel_time_minutes=travel_time_minutes,
                                                                      transport=transport)
 
             # Write results to file
