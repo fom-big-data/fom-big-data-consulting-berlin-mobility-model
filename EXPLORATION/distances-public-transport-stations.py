@@ -50,28 +50,21 @@ def get_means_of_transport_graph(transport, enhance_with_speed=False):
         elif transport == "bus":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
-                                                 custom_filter='["highway"~"secondary|tertiary|bus_stop"]')
+                                                 custom_filter='["highway"~"secondary|tertiary|residential|bus_stop"]')
         elif transport == "light_rail":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
-                                                 custom_filter='["railway"~"light_rail|station"]["railway"!="service_station"]["station"!="subway"]')
-
-            # Writes nodes of nets to
-            write_nodes_to_geojson(file_path="../results/stations-" + transport + ".geojson", g=g_transport)
+                                                 custom_filter='["railway"~"light_rail|station"]["railway"!="light_rail_entrance"]["railway"!="service_station"]["station"!="subway"]')
         elif transport == "subway":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
                                                  custom_filter='["railway"~"subway|station"]["railway"!="subway_entrance"]["railway"!="service_station"]["station"!="light_rail"]["service"!="yard"]')
-
-            # Writes nodes of nets to
-            write_nodes_to_geojson(file_path="../results/stations-" + transport + ".geojson", g=g_transport)
-
         elif transport == "tram":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
-                                                 custom_filter='["railway"~"tram|station"]["train"!="yes"]["station"!="subway"]["station"!="light_rail"]')
+                                                 custom_filter='["railway"~"tram|tram_stop"]["train"!="yes"]["station"!="subway"]["station"!="light_rail"]')
 
-            # Writes nodes of nets to
+        if transport in ["bus", "light_rail", "subway", "tram"]:
             write_nodes_to_geojson(file_path="../results/stations-" + transport + ".geojson", g=g_transport)
 
         if enhance_with_speed:

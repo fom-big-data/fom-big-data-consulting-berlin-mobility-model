@@ -52,11 +52,11 @@ def get_means_of_transport_graph(transport, enhance_with_speed=False):
         elif transport == "bus":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
-                                                 custom_filter='["highway"~"secondary|tertiary|bus_stop"]')
+                                                 custom_filter='["highway"~"secondary|tertiary|residential|bus_stop"]')
         elif transport == "light_rail":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
-                                                 custom_filter='["railway"~"light_rail|station"]["railway"!="service_station"]["station"!="subway"]')
+                                                 custom_filter='["railway"~"light_rail|station"]["railway"!="light_rail_entrance"]["railway"!="service_station"]["station"!="subway"]')
         elif transport == "subway":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
@@ -64,7 +64,7 @@ def get_means_of_transport_graph(transport, enhance_with_speed=False):
         elif transport == "tram":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
-                                                 custom_filter='["railway"~"tram|station"]["train"!="yes"]["station"!="subway"]["station"!="light_rail"]')
+                                                 custom_filter='["railway"~"tram|tram_stop"]["railway"!="tram_crossing"]["train"!="yes"]["station"!="subway"]["station"!="light_rail"]')
 
         if transport in ["bus", "light_rail", "subway", "tram"]:
             write_nodes_to_geojson(file_path="../results/stations-" + transport + ".geojson", g=g_transport)
@@ -181,8 +181,7 @@ def get_points_with_spatial_distance(g, points, travel_time_minutes, transport):
         min_spatial_distance, \
         max_spatial_distance = get_spatial_distance(g=g,
                                                     start_point=start_point,
-                                                    travel_time_minutes=travel_time_minutes,
-                                                    transport=transport)
+                                                    travel_time_minutes=travel_time_minutes)
 
         point_with_spatial_distance = {
             "lon": point["lon"],
