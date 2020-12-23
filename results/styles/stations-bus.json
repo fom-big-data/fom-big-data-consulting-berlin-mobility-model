@@ -1,0 +1,11 @@
+{
+  "id": "stations-bus-layer",
+  "type": "circle",
+  "source": "stations-bus",
+  "paint": {
+    "circle-radius": 4,
+    "circle-color": "#89388F",
+    "circle-stroke-color": "transparent",
+    "circle-stroke-width": 1
+  }
+}
