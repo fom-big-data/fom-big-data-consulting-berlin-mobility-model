@@ -19,6 +19,20 @@
       "rgba(255, 65, 45, 0.3)",
       1.5,
       "rgba(64, 204, 64, 0.3)"
-]
+],
+      "fill-outline-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "get",
+          "relative_real_speed"
+        ],
+        0.5,
+        "rgba(255, 100, 50, 1.0)",
+        1.5,
+        "rgba(255, 100, 50, 1.0)"
+ ]
   }
 }
