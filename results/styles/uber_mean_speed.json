@@ -14,10 +14,10 @@
         "speed_kph_mean"
       ],
       20,
-      "rgba(255, 0, 0, 1.0)",
+      "#FF851B",
       50,
-      "rgba(0, 255, 0, 1.0)"
+      "#0074D9"
     ],
-     "line-width": 4
+     "line-width": 2
   }
 }
