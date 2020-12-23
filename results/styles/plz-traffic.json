@@ -4,7 +4,7 @@
   "source": "plz-traffic",
   "layout": {},
   "paint": {
-    "fill-color": [
+    "fill-color":
       "interpolate",
       [
         "linear"
@@ -16,23 +16,9 @@
       0.0,
       "rgba(255, 255, 255, 0.3)",
       0.1,
+      "rgba(255, 65, 45, 0.3)",
       "#FF4136",
       1.5,
-      "#2ECC40"
-    ],
-     "fill-outline-color": [
-       "interpolate",
-       [
-         "linear"
-       ],
-       [
-         "get",
-         "relative_real_speed"
-       ],
-       0.5,
-       "rgba(255, 100, 50, 1.0)",
-       1.5,
-       "rgba(255, 100, 50, 1.0)"
-]
+      "rgba(64, 204, 64, 0.3)"
   }
 }
