@@ -1,0 +1,36 @@
+{
+  "id": "berlin-inhabitants-layer",
+  "type": "fill",
+  "source": "berlin-inhabitants",
+  "layout": {},
+  "paint": {
+    "fill-color": [
+      "interpolate",
+      [
+        "linear"
+      ],
+      [
+        "get",
+        "relative_real_speed"
+      ],
+      0.5,
+      "rgba(255, 255, 255, 0.0)",
+      1.5,
+      "rgba(255, 100, 50, 0.2)"
+    ],
+    "fill-outline-color": [
+      "interpolate",
+      [
+        "linear"
+      ],
+      [
+        "get",
+        "einwohner"
+      ],
+      0.5,
+      "rgba(255, 100, 50, 1.0)",
+      1.5,
+      "rgba(255, 100, 50, 1.0)"
+    ]
+  }
+}
