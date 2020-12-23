@@ -62,7 +62,7 @@ def get_means_of_transport_graph(transport, enhance_with_speed=False):
         elif transport == "tram":
             g_transport = load_graphml_from_file(file_path="tmp/" + transport + ".graphml",
                                                  place_name=PLACE_NAME,
-                                                 custom_filter='["railway"~"tram|tram_stop"]["train"!="yes"]["station"!="subway"]["station"!="light_rail"]')
+                                                 custom_filter='["railway"~"tram|tram_stop"]["railway"!="tram_crossing"]["train"!="yes"]["station"!="subway"]["station"!="light_rail"]')
 
         if transport in ["bus", "light_rail", "subway", "tram"]:
             write_nodes_to_geojson(file_path="../results/stations-" + transport + ".geojson", g=g_transport)
@@ -123,7 +123,7 @@ def get_points_distances(g_transport_bus,
     for point_index in tqdm(iterable=range(len(points)),
                             total=len(points),
                             desc="Evaluate points",
-                            unit="point", ):
+                            unit="point"):
         point = points[point_index]
         start_point = (float(point["lat"]), float(point["lon"]))
 
@@ -218,15 +218,15 @@ def write_nodes_to_geojson(file_path, g):
 
 
 def write_distances_to_file(file_path,
-                            mean_distances_bus,
-                            mean_distances_light_rail,
-                            mean_distances_subway,
-                            mean_distances_tram):
+                            distances_bus,
+                            distances_light_rail,
+                            distances_subway,
+                            distances_tram):
     with open(file_path, "w") as f:
-        f.write("       distance bus " + str(min(mean_distances_bus)) + " / max " + str(max(mean_distances_bus)) + "\n")
-        f.write("distance light rail " + str(min(mean_distances_light_rail)) + " / max " + str(max(mean_distances_light_rail)) + "\n")
-        f.write("    distance subway " + str(min(mean_distances_subway)) + " / max " + str(max(mean_distances_subway)) + "\n")
-        f.write("      distance tram " + str(min(mean_distances_tram)) + " / max " + str(max(mean_distances_tram)) + "\n")
+        f.write("       distance bus " + str(min(distances_bus)) + " / max " + str(max(distances_bus)) + "\n")
+        f.write("distance light rail " + str(min(distances_light_rail)) + " / max " + str(max(distances_light_rail)) + "\n")
+        f.write("    distance subway " + str(min(distances_subway)) + " / max " + str(max(distances_subway)) + "\n")
+        f.write("      distance tram " + str(min(distances_tram)) + " / max " + str(max(distances_tram)) + "\n")
 
 
 def plot_graph(g):
@@ -244,10 +244,10 @@ OVERRIDE_RESULTS = False
 sample_points = load_sample_points(file_path="../results/sample-points.csv")
 
 # Get graphs for means of transport
-g_transport_bus = get_means_of_transport_graph(transport="bus", enhance_with_speed=True)
-g_transport_light_rail = get_means_of_transport_graph(transport="light_rail", enhance_with_speed=True)
-g_transport_subway = get_means_of_transport_graph(transport="subway", enhance_with_speed=True)
-g_transport_tram = get_means_of_transport_graph(transport="tram", enhance_with_speed=True)
+g_transport_bus = get_means_of_transport_graph(transport="bus", enhance_with_speed=False)
+g_transport_light_rail = get_means_of_transport_graph(transport="light_rail", enhance_with_speed=False)
+g_transport_subway = get_means_of_transport_graph(transport="subway", enhance_with_speed=False)
+g_transport_tram = get_means_of_transport_graph(transport="tram", enhance_with_speed=False)
 
 result_file_name_base = "../results/distance-public-transport-stations"
 result_file_name_base_distances = "../results/distances/distance-public-transport-stations"
@@ -257,23 +257,23 @@ if not path.exists(result_file_name_base + ".geojson") or OVERRIDE_RESULTS:
 
     # Generate points
     points_with_distances, \
-    mean_distances_bus, \
-    mean_distances_light_rail, \
-    mean_distances_subway, \
-    mean_distances_tram = get_points_distances(g_transport_bus=g_transport_bus,
-                                               g_transport_light_rail=g_transport_light_rail,
-                                               g_transport_subway=g_transport_subway,
-                                               g_transport_tram=g_transport_tram,
-                                               points=sample_points)
+    distances_bus, \
+    distances_light_rail, \
+    distances_subway, \
+    distances_tram = get_points_distances(g_transport_bus=g_transport_bus,
+                                          g_transport_light_rail=g_transport_light_rail,
+                                          g_transport_subway=g_transport_subway,
+                                          g_transport_tram=g_transport_tram,
+                                          points=sample_points)
 
     # Write results to file
     write_coords_to_geojson(file_path=result_file_name_base + ".geojson",
                             coords=points_with_distances)
     write_distances_to_file(file_path=result_file_name_base_distances + ".txt",
-                            mean_distances_bus=mean_distances_bus,
-                            mean_distances_light_rail=mean_distances_light_rail,
-                            mean_distances_subway=mean_distances_subway,
-                            mean_distances_tram=mean_distances_tram)
+                            distances_bus=distances_bus,
+                            distances_light_rail=distances_light_rail,
+                            distances_subway=distances_subway,
+                            distances_tram=distances_tram)
 else:
     print(">>> Exists")
 
