@@ -153,9 +153,9 @@ def get_points_distances(g_transport_bus,
         if distance_light_rail > 0:
             distances_light_rail.append(distance_bus)
         if distance_subway > 0:
-            distances_subway.append(distances_subway)
+            distances_subway.append(distance_subway)
         if distance_tram > 0:
-            distances_tram.append(distances_tram)
+            distances_tram.append(distance_tram)
 
     return points_with_distances, \
            distances_bus, \
@@ -180,9 +180,9 @@ def write_coords_to_geojson(file_path, coords):
         feature["type"] = "Feature"
         feature["properties"] = {
             "distance_bus": coord["distance_bus"],
-            "distances_light_rail": coord["distances_light_rail"],
-            "distances_subway": coord["distances_subway"],
-            "distances_tram": coord["distances_tram"],
+            "distance_light_rail": coord["distance_light_rail"],
+            "distance_subway": coord["distance_subway"],
+            "distance_tram": coord["distance_tram"],
             "distance_min": coord["distance_min"],
             "distance_max": coord["distance_max"],
             "distance_avg": coord["distance_avg"],
