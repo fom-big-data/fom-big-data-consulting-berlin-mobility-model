@@ -17,20 +17,6 @@
       "#FF4136",
       1.5,
       "#2ECC40"
-    ]/*,
-    "fill-outline-color": [
-      "interpolate",
-      [
-        "linear"
-      ],
-      [
-        "get",
-        "relative_real_speed"
-      ],
-      0.5,
-      "rgba(255, 100, 50, 1.0)",
-      1.5,
-      "rgba(255, 100, 50, 1.0)"
-    ]*/
+    ]
   }
 }
