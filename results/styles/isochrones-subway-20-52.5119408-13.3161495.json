@@ -1,0 +1,11 @@
+{
+  "id": "isochrones-subway-20-52.5119408-13.3161495-layer",
+  "type": "circle",
+  "source": "isochrones-subway-20-52.5119408-13.3161495",
+  "paint": {
+    "circle-radius": 1,
+    "circle-color": "#c7e9b4",
+    "circle-stroke-color": "transparent",
+    "circle-stroke-width": 1
+  }
+}
