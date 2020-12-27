@@ -1,7 +1,8 @@
 {
-  "id": "uber_mean_speed-layer",
+  "id": "allowed_car_speed",
   "type": "line",
   "layout": {},
+  "source":"allowed_car_speed",
   "paint": {
     "line-color": [
       "interpolate",
