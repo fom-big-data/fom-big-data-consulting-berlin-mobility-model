@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "area_m2": 83.878, "area_km2": 8.3878123925358526e-05 }, "geometry": { "type": "Point", "coordinates": [ 13.327348249768159, 52.5758382438936 ] } },
+{ "type": "Feature", "properties": { "area_m2": 39.436, "area_km2": 3.9436109399423006e-05 }, "geometry": { "type": "Point", "coordinates": [ 13.423470051242166, 52.577720418818203 ] } },
+{ "type": "Feature", "properties": { "area_m2": 18.756, "area_km2": 1.8756333634257318e-05 }, "geometry": { "type": "Point", "coordinates": [ 13.51617839291675, 52.569629828876003 ] } }
+]
+}
