@@ -1,0 +1,10 @@
+{
+  "id": "cemetery-layer",
+  "type": "fill",
+  "source": "cemetery",
+  "layout": {},
+  "paint": {
+    "fill-color": "rgba(168, 50, 50, 0.5)",
+    "fill-outline-color": "rgba(130, 39, 39, 1.0)"
+  }
+}
