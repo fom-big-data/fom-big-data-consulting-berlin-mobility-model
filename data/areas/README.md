@@ -35,3 +35,4 @@ out skel qt;
 * park ```"leisure"~"park"```
 * recreation_ground ```"landuse"~"recreation_ground"```
 * residential ```"landuse"~"residential"```
+* water ```"natural"~"water"```
