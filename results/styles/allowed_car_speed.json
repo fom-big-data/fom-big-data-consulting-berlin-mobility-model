@@ -1,0 +1,22 @@
+{
+  "id": "uber_mean_speed-layer",
+  "type": "line",
+  "layout": {},
+  "paint": {
+    "line-color": [
+      "interpolate",
+      [
+        "linear"
+      ],
+      [
+        "get",
+        "maxspeed"
+      ],
+      20,
+      "#FF851B",
+      50,
+      "#0074D9"
+    ],
+     "line-width": 2
+  }
+}
