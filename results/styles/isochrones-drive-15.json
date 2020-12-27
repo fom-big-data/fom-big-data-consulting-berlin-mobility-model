@@ -11,7 +11,7 @@
       ],
       [
         "get",
-	"avg_dist"
+	    "mean_spatial_distance_15min"
       ],
       2000,
       "rgba(255,50,50,0.2)",
