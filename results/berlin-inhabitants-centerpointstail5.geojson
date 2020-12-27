@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "plz": "14109", "first_dig_plz": "1", "einwohner": 10049, "area_m2": 25228864.822468046, "area_km2": 25.228864822468047, "einwohner\/km2": 398.314, "einwohner\/m2": 0.000398 }, "geometry": { "type": "Point", "coordinates": [ 13.143992108714903, 52.41973938139634 ] } },
+{ "type": "Feature", "properties": { "plz": "12527", "first_dig_plz": "1", "einwohner": 9425, "area_m2": 26207872.670622554, "area_km2": 26.207872670622553, "einwohner\/km2": 359.625, "einwohner\/m2": 0.00036 }, "geometry": { "type": "Point", "coordinates": [ 13.633822000008271, 52.385627077604795 ] } },
+{ "type": "Feature", "properties": { "plz": "12559", "first_dig_plz": "1", "einwohner": 1, "area_m2": 2820.6199631467462, "area_km2": 0.0028206199631467463, "einwohner\/km2": 354.532, "einwohner\/m2": 0.000355 }, "geometry": { "type": "Point", "coordinates": [ 13.581697395496569, 52.442000974851638 ] } },
+{ "type": "Feature", "properties": { "plz": "13159", "first_dig_plz": "1", "einwohner": 1762, "area_m2": 10939873.608494885, "area_km2": 10.939873608494885, "einwohner\/km2": 161.062, "einwohner\/m2": 0.000161 }, "geometry": { "type": "Point", "coordinates": [ 13.394987084270984, 52.62179160597119 ] } },
+{ "type": "Feature", "properties": { "plz": "14053", "first_dig_plz": "1", "einwohner": 139, "area_m2": 1469243.3538099816, "area_km2": 1.4692433538099816, "einwohner\/km2": 94.607, "einwohner\/m2": 9.5e-05 }, "geometry": { "type": "Point", "coordinates": [ 13.238196924265079, 52.515356292872838 ] } }
+]
+}
