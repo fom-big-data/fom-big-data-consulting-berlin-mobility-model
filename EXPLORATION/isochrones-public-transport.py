@@ -161,7 +161,7 @@ def load_sample_points(file_path):
     return sample_points
 
 
-def get_points_with_spatial_distance(g, points, travel_time_minutes, transport):
+def get_points_with_spatial_distance(g, points, travel_time_minutes):
     points_with_spatial_distance = []
     failed_points = []
     mean_spatial_distances = []
@@ -363,8 +363,7 @@ for transport in MEANS_OF_TRANSPORT:
             min_spatial_distances, \
             max_spatial_distances = get_points_with_spatial_distance(g=g,
                                                                      points=sample_points,
-                                                                     travel_time_minutes=travel_time_minutes,
-                                                                     transport=transport)
+                                                                     travel_time_minutes=travel_time_minutes)
 
             # Write results to file
             write_coords_to_geojson(file_path=result_file_name_base + ".geojson",
