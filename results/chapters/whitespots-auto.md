@@ -10,4 +10,4 @@ im Durchschnitt XX KM weit.
 Weniger gut angebundene Gebiete sind vor allem an den Stadträndern zu finden. So liegt die innerhalb von 15 Minuten 
 durchschnittlich fahrbare Strecke um Kladow und Gatow bei lediglich XX KM. Ein Grund hierfür ist die Havel, welche sich 
 um dieses Stadtgebiet bewegt und die Erreichbarkeit erschwert. Auch im Norden der Stadt gibt es um die Ortsteile Karow,
-Buch und Französisch Buchholz gebiete die mit dem AUto weniger gut zu erreichen sind. 
+Buch und Französisch Buchholz Gebiete die mit dem Auto weniger gut zu erreichen sind. 
