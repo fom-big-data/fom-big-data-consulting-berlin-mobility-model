@@ -3,8 +3,8 @@
   "type": "circle",
   "source": "stations-bus",
   "paint": {
-    "circle-radius": 4,
-    "circle-color": "#89388F",
+    "circle-radius": 1,
+    "circle-color": "rgba(137, 56, 143, 0.5)",
     "circle-stroke-color": "transparent",
     "circle-stroke-width": 1
   }
