@@ -1,18 +1,13 @@
 ### Die Erreichbarkeit mit dem Auto ist in Berlin weitgehend gegeben
 
-Die Berechnung auf Ebene der Straßeninfrastruktur zeigt deutlich, dass die Straßeninfrastruktur in weiten Teilen der 
-Stadt eine ähnliche Erreichbarkeit ermöglicht. Bei näherer Betrachtung fällt auf, dass einzelne Orte im Südwesten der 
-Stadt besonders stark von der Nähe zur Stadtautobahn profitieren und im Vergleich zu anderen Orten eine höhere 
-Erreichbarkeit aufweisen. Der Ort mit der besten Erreichbarkeit auf Ebene des Straßennetzes befindet sich demnach auch
-Charlottenburg (siehe Marker 1). Von hier kommt eine Autofahrer*in innerhalb von XX Minuten im Durchschnitt XX KM weit.
-Die am wenigsten gut angundenen Ausgangspunkte befinden s
+Die Berechnung auf Ebene des Autoverkehrs zeigt deutlich, dass die Straßeninfrastruktur in weiten Teilen der 
+Stadt eine hohe Erreichbarkeit gewährleistet. Bei näherer Betrachtung fällt auf, dass einzelne Orte südwestlich vom 
+Stadtzentrum besonders stark von der Nähe zur Stadtautobahn profitieren und im Vergleich zu anderen Orten eine höhere 
+Erreichbarkeit aufweisen. Dabei überrascht es nicht, dass sich der am besten angebundene Ort in Charlottenburg, ganz in
+der nähe zu einer Auffahrt auf die Stadtautobahn befindet. Von hier kommt eine Autofahrer*in innerhalb von XX Minuten 
+im Durchschnitt XX KM weit. 
 
-der Karte auf der rechten Seite zeigt deutlich auf, dass die Erreichbark
-
-
-Die Berechnung der Erreichbarkeit mit dem Auto werden folgende Annahmen getroffen. Zum einen werden
-die gleichen randomisiert generierten Punkte die auch für die anderen Verkehrsmittel genutzt werden (siehe Einleitung).
-Zum anderen wird angenommen, dass die Geschwindigkeit die mit dem Auto zurückgelegt werden kann der tatsächlich gefahrenen
-Geder durschnittlichen
-Geschwindigkeit auf dieser Straßeals Ausgangspunkte genutzt, die auch f die Eingangsnimmt die Geschwindigkeit Erreichbarkeit mit dem Auto gestaltet sich über die Stadt
-
+Weniger gut angebundene Gebiete sind vor allem an den Stadträndern zu finden. So liegt die innerhalb von 15 Minuten 
+durchschnittlich fahrbare Strecke um Kladow und Gatow bei lediglich XX KM. Ein Grund hierfür ist die Havel, welche sich 
+um dieses Stadtgebiet bewegt und die Erreichbarkeit erschwert. Auch im Norden der Stadt gibt es um die Ortsteile Karow,
+Buch und Französisch Buchholz gebiete die mit dem AUto weniger gut zu erreichen sind. 
