@@ -1,0 +1,10 @@
+{
+  "id": "industrial-layer",
+  "type": "fill",
+  "source": "industrial",
+  "layout": {},
+  "paint": {
+    "fill-color": "rgba(253, 216, 53, 0.5)",
+    "fill-outline-color": "rgba(253, 216, 53, 1.0)"
+  }
+}
