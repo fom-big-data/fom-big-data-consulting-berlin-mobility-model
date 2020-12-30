@@ -3,7 +3,7 @@
   "type": "circle",
   "source": "stations-rail",
   "paint": {
-    "circle-radius": 4,
+    "circle-radius": 2,
     "circle-color": "#03894C",
     "circle-stroke-color": "transparent",
     "circle-stroke-width": 1

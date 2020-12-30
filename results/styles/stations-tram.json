@@ -3,7 +3,7 @@
   "type": "circle",
   "source": "stations-tram",
   "paint": {
-    "circle-radius": 4,
+    "circle-radius": 2,
     "circle-color": "#E02B25",
     "circle-stroke-color": "transparent",
     "circle-stroke-width": 1

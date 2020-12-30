@@ -3,7 +3,7 @@
   "type": "circle",
   "source": "stations-subway",
   "paint": {
-    "circle-radius": 4,
+    "circle-radius": 2,
     "circle-color": "#0860A6",
     "circle-stroke-color": "transparent",
     "circle-stroke-width": 1

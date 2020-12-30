@@ -1,0 +1,10 @@
+{
+  "id": "residential-layer",
+  "type": "fill",
+  "source": "residential",
+  "layout": {},
+  "paint": {
+    "fill-color": "rgba(229, 57, 53, 0.5)",
+    "fill-outline-color": "rgba(229, 57, 53, 1.0)"
+  }
+}
