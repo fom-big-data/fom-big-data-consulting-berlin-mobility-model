@@ -3,7 +3,7 @@
     "type": "circle",
     "source": "isochrones",
     "paint": {
-      "circle-radius": 8,
+      "circle-radius": 2,
       "circle-color": [
         "interpolate",
         [
