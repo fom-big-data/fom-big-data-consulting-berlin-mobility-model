@@ -4,7 +4,7 @@
     "source": "isochrones",
     "paint": {
       "line-width": 3,
-      "fill-color": [
+      "line-color": [
         "interpolate",
         [
           "linear"
