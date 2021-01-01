@@ -1,10 +1,9 @@
 {
     "id": "isochrones",
-    "type": "circle",
+    "type": "fill",
     "source": "isochrones",
     "paint": {
-      "circle-radius": 2,
-      "circle-color": [
+      "fill-color": [
         "interpolate",
         [
           "linear"
@@ -26,7 +25,7 @@
         300,
         "rgba(255,10,10,0.2)"
       ],
-      "circle-stroke-color": "transparent",
-      "circle-stroke-width": 1
+      "fill-outline-color": "#3bb2d0",
+      "fill-opacity": 0.5
     }
   }
