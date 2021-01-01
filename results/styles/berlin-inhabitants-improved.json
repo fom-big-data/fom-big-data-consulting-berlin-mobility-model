@@ -3,28 +3,7 @@
   "type": "fill",
   "source": "isochrones",
   "paint": {
-    "fill-color": [
-      "interpolate",
-      [
-          "linear"
-        ],
-        [
-          "get",
-          "einwohner_km2"
-        ],
-        0,
-        "rgba(50,200,50,0.2)",
-        1000,
-        "rgba(150,100,100,0.2)",
-        10000,
-        "rgba(50,50,200,0.2)",
-        15000,
-        "rgba(200,100,50,0.2)",
-        20000,
-        "rgba(200,100,100,0.2)",
-        30000,
-        "rgba(255,10,10,0.2)"
-      ],
-      "fill-outline-color": "#3bb2d0"
+    "fill-color": "rgba(50,200,50,0.2)",
+    "fill-outline-color": "#3bb2d0"
     }
 }
