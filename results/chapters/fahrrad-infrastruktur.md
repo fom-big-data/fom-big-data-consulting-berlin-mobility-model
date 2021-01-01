@@ -8,5 +8,6 @@ Radschnellwegen und zum Anschluss wichtiger Orte an das Fahrradnetz laut. So ist
 anders als moderne Flughäfen beispielsweise in Amsterdam, Frankfurt (Main) und Kopenhagen nicht an das Fahrradnetz 
 angebunden.
 
-Durchschnittliche Länge eines Segmentes ~ 81,08 m
-Maximale Segmentlänge ~ 1,73 km
+Die durchschnittliche Länge eines Segmentes bzw. einer Fahrradspur ohne unterbrechung beträgt rund 81,08 Meter. 
+Das größte bzw. längste Segment besteht aus einer Länge von rund 1,73 Kilometern ohne Unterbrechung.
+
