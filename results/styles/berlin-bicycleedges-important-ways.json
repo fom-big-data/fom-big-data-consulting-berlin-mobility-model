@@ -2,9 +2,8 @@
     "id": "isochrones",
     "type": "line",
     "source": "isochrones",
-    "paint": {
-      "line-width": 3,
-      "line-color": [
+    "layout": {},
+    "paint": {"line-color": [
         "interpolate",
         [
           "linear"
@@ -25,6 +24,7 @@
         "rgba(200,100,100,1)",
         300,
         "rgba(255,10,10,1)"
-      ]
+      ],
+      "line-width": 5
     }
   }
