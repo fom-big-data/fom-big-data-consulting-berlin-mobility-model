@@ -1,0 +1,20 @@
+{
+  "id": "isochrones",
+  "type": "circle",
+  "source": "isochrones",
+  "paint": {
+    "circle-radius": 4,
+    "circle-color": [
+      "step",
+      [
+        "get",
+        "max_spatial_distance_15min"
+      ],
+      "#51bbd6",
+      2000,
+      "#ff00f2"
+    ],
+    "circle-stroke-color": "transparent",
+    "circle-stroke-width": 1
+  }
+}
