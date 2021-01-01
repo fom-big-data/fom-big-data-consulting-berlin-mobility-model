@@ -55,20 +55,18 @@ def read_banned_polygons():
 
     hobrechtsfelde = create_rectangular_polygon(xmin=13.463047742843628, xmax=13.487488031387329,
                                                 ymin=52.65753934266786, ymax=52.673161953673485)
-
     schoenerlinde = create_rectangular_polygon(xmin=13.434755802154541, xmax=13.454807996749878,
                                                ymin=52.63490561092806, ymax=52.64950788953237)
-
-    karow = create_rectangular_polygon(xmin=13.47823441028595, xmax=13.505147695541382,
-                                       ymin=52.58681321385924, ymax=52.60120347187549)
-    erkner = create_rectangular_polygon(xmin=13.70869517326355, xmax=13.738564252853394,
-                                        ymin=52.39868761672284, ymax=52.41236735074955)
-    schmoeckwitz = create_rectangular_polygon(xmin=13.688042163848877, xmax=13.697644472122192,
-                                              ymin=52.36851176021483, ymax=52.37688291231777)
-    thermometer = create_rectangular_polygon(xmin=13.302007913589478, xmax=13.334881067276001,
-                                             ymin=52.40274288931766, ymax=52.41086540546308)
-    gatow = create_rectangular_polygon(xmin=13.135356903076172, xmax=13.176544904708862,
-                                       ymin=52.47663143070943, ymax=52.4944220187933)
+    karow = create_rectangular_polygon(xmin=13.47723441028595, xmax=13.506147695541382,
+                                       ymin=52.58581321385924, ymax=52.60220347187549)
+    erkner = create_rectangular_polygon(xmin=13.70769517326355, xmax=13.739564252853394,
+                                        ymin=52.39768761672284, ymax=52.41336735074955)
+    schmoeckwitz = create_rectangular_polygon(xmin=13.687042163848877, xmax=13.698644472122192,
+                                              ymin=52.36751176021483, ymax=52.37788291231777)
+    thermometer = create_rectangular_polygon(xmin=13.301007913589478, xmax=13.335881067276001,
+                                             ymin=52.40174288931766, ymax=52.41186540546308)
+    gatow = create_rectangular_polygon(xmin=13.134356903076172, xmax=13.177544904708862,
+                                       ymin=52.47563143070943, ymax=52.4954220187933)
 
     banned_polygons.append(hobrechtsfelde)
     banned_polygons.append(schoenerlinde)
@@ -105,7 +103,7 @@ def write_polygons_to_geojson(file_path, polygons):
 
         for polygon in polygons:
             feature = {}
-            feature["geometry"] = json.polygon.ExportToJson()
+            feature["geometry"] = polygon.ExportToJson()
             feature["type"] = "Feature"
             features.append(feature)
 
