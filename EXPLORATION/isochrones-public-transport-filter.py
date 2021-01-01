@@ -57,24 +57,33 @@ def read_banned_polygons():
                                                 ymin=52.65753934266786, ymax=52.673161953673485)
     schoenerlinde = create_rectangular_polygon(xmin=13.434755802154541, xmax=13.454807996749878,
                                                ymin=52.63490561092806, ymax=52.64950788953237)
+    moenchmuehle = create_rectangular_polygon(xmin=13.390287922859192, xmax=13.416025472640991,
+                                               ymin=52.63136289698284, ymax=52.64859743612566)
     karow = create_rectangular_polygon(xmin=13.47723441028595, xmax=13.506147695541382,
                                        ymin=52.58581321385924, ymax=52.60220347187549)
     erkner = create_rectangular_polygon(xmin=13.70769517326355, xmax=13.739564252853394,
                                         ymin=52.39768761672284, ymax=52.41336735074955)
-    schmoeckwitz = create_rectangular_polygon(xmin=13.687042163848877, xmax=13.698644472122192,
-                                              ymin=52.36751176021483, ymax=52.37788291231777)
+    schmoeckwitz = create_rectangular_polygon(xmin=13.636369871139526, xmax=13.667160702705383,
+                                              ymin=52.36840593782319, ymax=52.38515889235622)
     thermometer = create_rectangular_polygon(xmin=13.301007913589478, xmax=13.335881067276001,
                                              ymin=52.40174288931766, ymax=52.41186540546308)
     gatow = create_rectangular_polygon(xmin=13.134356903076172, xmax=13.177544904708862,
                                        ymin=52.47563143070943, ymax=52.4954220187933)
+    schwanenwerder = create_rectangular_polygon(xmin=13.166237639427185, xmax=13.173001242637634,
+                                       ymin=52.44434489294347, ymax=52.45068031376118)
+    kohlhasenbrueck = create_rectangular_polygon(xmin=13.136239813804626, xmax=13.150551153182983,
+                                       ymin=52.3940084190669, ymax=52.40458400895346)
 
     banned_polygons.append(hobrechtsfelde)
     banned_polygons.append(schoenerlinde)
+    banned_polygons.append(moenchmuehle)
     banned_polygons.append(karow)
     banned_polygons.append(erkner)
     banned_polygons.append(schmoeckwitz)
     banned_polygons.append(thermometer)
     banned_polygons.append(gatow)
+    banned_polygons.append(schwanenwerder)
+    banned_polygons.append(kohlhasenbrueck)
 
     write_polygons_to_geojson("../results/debug-banned-polygons.geojson", banned_polygons)
 
