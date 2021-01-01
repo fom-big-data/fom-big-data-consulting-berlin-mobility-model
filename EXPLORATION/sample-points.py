@@ -34,6 +34,8 @@ def get_bounding_box(polygon):
 
 def get_random_points_in_polygons(polygons_districts,
                                   polygons_cemetery,
+                                  polygons_farmland,
+                                  polygons_farmyard,
                                   polygons_forest,
                                   polygons_garden,
                                   polygons_park,
@@ -70,14 +72,16 @@ def get_random_points_in_polygons(polygons_districts,
                        random.uniform(ymin, ymax))
 
         if is_in_desired_area(point,
-                       polygons_districts,
-                       polygons_cemetery,
-                       polygons_forest,
-                       polygons_garden,
-                       polygons_park,
-                       polygons_recreation_ground,
-                       polygons_water,
-                       polygons_wood):
+                              polygons_districts,
+                              polygons_cemetery,
+                              polygons_farmland,
+                              polygons_farmyard,
+                              polygons_forest,
+                              polygons_garden,
+                              polygons_park,
+                              polygons_recreation_ground,
+                              polygons_water,
+                              polygons_wood):
 
             points.append(point)
             counter += 1
@@ -93,13 +97,14 @@ def get_random_points_in_polygons(polygons_districts,
 def is_in_desired_area(point,
                        polygons_districts,
                        polygons_cemetery,
+                       polygons_farmland,
+                       polygons_farmyard,
                        polygons_forest,
                        polygons_garden,
                        polygons_park,
                        polygons_recreation_ground,
                        polygons_water,
                        polygons_wood):
-
     in_district = False
     for polygon in polygons_districts:
         if point.Within(polygon):
@@ -111,6 +116,16 @@ def is_in_desired_area(point,
     for polygon in polygons_cemetery:
         if point.Within(polygon):
             print("in cemetery")
+            return False
+
+    for polygon in polygons_farmland:
+        if point.Within(polygon):
+            print("in farmland")
+            return False
+
+    for polygon in polygons_farmyard:
+        if point.Within(polygon):
+            print("in farmyard")
             return False
 
     for polygon in polygons_forest:
@@ -144,6 +159,7 @@ def is_in_desired_area(point,
             return False
 
     return True
+
 
 def get_coordinates(points):
     data = []
@@ -192,6 +208,8 @@ NUM_POINTS = 10_000
 # Get polygons
 polygons_districts = get_polygons(read_geojson('../data/inhabitants/berlin-inhabitants.geojson'))
 polygons_cemetery = get_polygons(read_geojson('../results/cemetery.geojson'))
+polygons_farmland = get_polygons(read_geojson('../results/farmland.geojson'))
+polygons_farmyard = get_polygons(read_geojson('../results/farmyard.geojson'))
 polygons_forest = get_polygons(read_geojson('../results/forest.geojson'))
 polygons_garden = get_polygons(read_geojson('../results/garden.geojson'))
 polygons_park = get_polygons(read_geojson('../results/park.geojson'))
@@ -202,6 +220,8 @@ polygons_wood = get_polygons(read_geojson('../results/wood.geojson'))
 # Generate points in polygons
 points = get_random_points_in_polygons(polygons_districts,
                                        polygons_cemetery,
+                                       polygons_farmland,
+                                       polygons_farmyard,
                                        polygons_forest,
                                        polygons_garden,
                                        polygons_park,
