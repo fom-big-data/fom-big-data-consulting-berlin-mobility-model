@@ -7,3 +7,6 @@ Busspuren – fehlen (in FARBE), für den Fahrradverkehr geöffnet werden. Zudem
 Radschnellwegen und zum Anschluss wichtiger Orte an das Fahrradnetz laut. So ist beispielsweise der neue Flughafen BER,
 anders als moderne Flughäfen beispielsweise in Amsterdam, Frankfurt (Main) und Kopenhagen nicht an das Fahrradnetz 
 angebunden.
+
+Durchschnittliche Länge eines Segmentes ~ 81,08 m
+Maximale Segmentlänge ~ 1,73 km
