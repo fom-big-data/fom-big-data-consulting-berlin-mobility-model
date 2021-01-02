@@ -1,0 +1,10 @@
+{
+  "id": "university-layer",
+  "type": "fill",
+  "source": "university",
+  "layout": {},
+  "paint": {
+    "fill-color": "rgba(0,104,55, 0.5)",
+    "fill-outline-color": "rgba(0,104,55, 1.0)"
+  }
+}

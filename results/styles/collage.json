@@ -1,0 +1,10 @@
+{
+  "id": "collage-layer",
+  "type": "fill",
+  "source": "collage",
+  "layout": {},
+  "paint": {
+    "fill-color": "rgba(65,171,93, 0.5)",
+    "fill-outline-color": "rgba(65,171,93, 1.0)"
+  }
+}
