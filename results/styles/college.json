@@ -1,7 +1,7 @@
 {
-  "id": "collage-layer",
+  "id": "college-layer",
   "type": "fill",
-  "source": "collage",
+  "source": "college",
   "layout": {},
   "paint": {
     "fill-color": "rgba(65,171,93, 0.5)",
