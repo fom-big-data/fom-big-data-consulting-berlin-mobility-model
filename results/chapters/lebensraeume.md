@@ -6,4 +6,3 @@ Die blasseren Flächen zeigen Gebiete mit einer geringeren Einwohnerdichte. Dabe
 geringer ist die Einwohnerdichte. Ein Blick auf die Karte zeigt, dass die Bevölkerung in Berlin gleichmäßig über das 
 gesamte Stadtgebiet verteilt lebt. Die Karte zeigt also das, wofür Berlin ohnehin bekannt ist, die ausgeprägte Präsenz von
 Kiezen und die Abwesenheit eines Stadtzentrums. 
-
