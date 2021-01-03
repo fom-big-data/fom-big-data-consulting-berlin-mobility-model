@@ -90,7 +90,7 @@ def enhance_graph_with_speed(g, time_attribute='time', transport=None):
             speed = 31.0
         elif (transport == 'tram'):
             speed = 19.0
-        elif (transport == 'rail'):
+        elif (transport == 'light_rail'):
             speed = 38.0
 
         if speed is not None:
@@ -327,7 +327,7 @@ def plot_graph(g):
 
 PLACE_NAME = "Berlin, Germany"
 TRAVEL_TIMES_MINUTES = [15]
-MEANS_OF_TRANSPORT = ["all", "bus", "light_rail", "subway", "tram", "bike"]
+MEANS_OF_TRANSPORT = ["all"]
 OVERRIDE_RESULTS = False
 
 # Load walk graph
