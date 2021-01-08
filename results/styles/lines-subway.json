@@ -1,0 +1,10 @@
+{
+  "id": "lines-bus-layer",
+  "type": "line",
+  "layout": {},
+  "source": "lines-bus",
+  "paint": {
+    "line-color": "#0860A6",
+    "line-width": 2
+  }
+}

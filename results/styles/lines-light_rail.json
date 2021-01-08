@@ -1,0 +1,10 @@
+{
+  "id": "lines-light_rail-layer",
+  "type": "line",
+  "layout": {},
+  "source": "lines-light_rail",
+  "paint": {
+    "line-color": "#03894C",
+    "line-width": 2
+  }
+}
