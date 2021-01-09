@@ -5,6 +5,6 @@
   "source": "lines-bus",
   "paint": {
     "line-color": "#89388f",
-    "line-width": 1
+    "line-width": 0.5
   }
 }
