@@ -20,8 +20,8 @@ def load_graphml_from_file(file_path, place_name, network_type=None, custom_filt
 
 def load_graphml(place_name, network_type=None, custom_filter=None):
     return ox.graph.graph_from_place(query=place_name,
-                                     simplify=True,
-                                     retain_all=False,
+                                     simplify=False,
+                                     retain_all=True,
                                      buffer_dist=2500,
                                      network_type=network_type,
                                      custom_filter=custom_filter)
