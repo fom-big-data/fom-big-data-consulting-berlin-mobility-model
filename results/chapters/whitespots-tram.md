@@ -1,7 +1,7 @@
 ### Der Grad der Straßenbahnanbindung macht die historische Teilung der Stadt deutlich
 
-Bis im Jahr 1929 ga es in Berlin noch 93 Straßenbahnlinien, die weite Teile des Stadtgebiets umfassten. Bereits mit 
-Beginn der 1930er Jahre begann der langsame Abbau des Berliner Straßenbahnnetzes, indem die Linien 42 und 97 durch
+Bis im Jahr 1929 existierten in Berlin noch 93 Straßenbahnlinien, die weite Teile des Stadtgebiets umfassten. In den 
+frühen 1930er Jahren begann der langsame Abbau des Berliner Straßenbahnnetzes, indem die Linien 42 und 97 durch
 Buslinien ersetzt wurden. Bereits im Jahr 1938 war das Straßenbahnnetz mit den verbleibenden 71 Linien stark
 ausgedünnt. Die Stilllegung von Straßenbahnlinien wurde nach dem Zweiten Weltkrieg weiter forciert. Dabei Unterschied
 sich die Verkehrspolitik in West- und Ostberlin drastisch. In Westberlin orientierte man sich stark an der 
@@ -15,3 +15,5 @@ Die historische Trennung der Stadt in West- und Ost-Berlin wird auch anhand der 
 im Westen der Stadt keine Straßenbahnlinie, sodass die Anbindung des westlichen Stadtgebiets an das Straßenbahnnetz
 nicht gewährleistet ist. dass eine Straßenbahnanbindung lediglich in den östlichen Bezirken der Stadt gegeben
 ist. Die mit der Straßenbahn erreichbaren Gebiete befinden sich in XX (Marker 1), YY (Marker 2), ZZ(marker 3).
+
+Durschnittlich zurücklegbare Strecke (15 Minuten) für die gut/schlecht angebundenen Gebiete herausziehen --> in Text

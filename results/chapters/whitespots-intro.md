@@ -1,7 +1,7 @@
 ### Lücken in der Infrastruktur erkennen
 Das Ziel des folgenden Abschnitts liegt darin, Lücken in der Mobiltiätsinfrastruktur aufzuzeigen. Dabei werden die
-Ebenen der Mobilitätsinfrastruktur zunächst gesondert und abschließend gemeinsam betrachtet. Um die Schwachstellen
-auf in der Infrastruktur sichtbar zu machen, werden zunächst 10.000 Punkte zufällig auf der Fläche der Stadt generiert. 
+Ebenen der Mobilitätsinfrastruktur zunächst gesondert und abschließend gemeinsam betrachtet. Um die Schwachstellen in 
+der Infrastruktur sichtbar zu machen, werden zunächst 10.000 Punkte zufällig auf der Fläche der Stadt generiert. 
 Ausgenommen sind davon Wasser und Grünflächen um die grundsätzliche Erreichbarkeit der Punkte sicherzustellen.
 Diese Punkte dienen als Ausgangspunkt zur Berechnung der relativen Erreichbarkeit unterschiedlicher Orte in der Stadt 
 mithilfe der im vorangegangenen Abschnitt vorgestellten Isochrone. 

@@ -14,3 +14,4 @@ ist keine S-Bahnstation fußläufig (d. h. innerhalb von 15 Minuten) zu erreich
 Ortsteil Charlottenburg-Nord (Marker 5) sowie den Ortsteil Weißensee (Marker 6)
 
 
+Hier sollten auch die durchschnittlichen Distanzen noch mit aufgegriffen werden --> Text einbauen!
