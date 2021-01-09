@@ -1,0 +1,10 @@
+{
+  "id": "lines-tram-layer",
+  "type": "line",
+  "layout": {},
+  "source": "lines-tram",
+  "paint": {
+    "line-color": "#E02B25",
+    "line-width": 2
+  }
+}

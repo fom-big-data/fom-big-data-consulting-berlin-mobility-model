@@ -6,7 +6,7 @@ Distanz beruht, die von einem Ort durchschnittlich innerhalb von 15 Minuten zur�
 der Erreichbarkeit wird zusätzlich angenommen, dass die Distanz zur nächsten U-Bahnstation in Laufgeschwindigkeit 
 zurückgelegt wird. Es ist also davon auszugehen, dass bei einer Berechnung mit längeren Zeiträumen (bspw. 40 Minuten) 
 ein stärkeres Gefälle auftreten würde, da der Unterschied zwischen der schnelleren Geschwindigkeit der U-Bahn und der
-Fußgeschwindigkeit stärker berücksichtigt würde (DAS KÖNNTEN WIR GGF <wenn Zeit ist> noch Berechnen, in den 
+Fußgeschwindigkeit stärker zum Tragen käme (DAS KÖNNTEN WIR GGF <wenn Zeit ist> noch Berechnen, in den 
 Mobilitätskompass schieben und hier darauf verweisen).
 
 Aus der Karte auf der rechten Seit geht eindeutig hervor, dass die U-Bahn insbesondere in den zentralen Bezirken 
@@ -18,5 +18,5 @@ U-Bahnnetz an, jedoch bietet sich erst an der zehnten Station die Möglichkeit z
 Eine ähnliche Situation zeigt sich auch in den anderen Außenbezirken wie Spandau (Marker 2) und 
 Weißensee osten des Bezirks Pankow (Marker 3).
 
-
+Auch hier noch die durchschnittlich zurücklegbaren Strecken (15 Minuten) aufgreifen --> Text einarbeiten!
 

@@ -25,7 +25,7 @@ def if_point_inpolygon(polygon, point):
         bool
             ist the point in poolygon .. Ture or False
         """
-    
+    #polygon = Polygon(polygon)
     point = Point(point)
     return point.within(polygon)
         
@@ -69,3 +69,42 @@ def count_points_in_polygonlist(polygonlist, pointlist):
     for polygon in polygonlist:
         countliste.append([if_point_inpolygon(polygon,point) for point in pointlist].count(True))
     return countliste
+
+def if_points_in_polygonlist(polygonlist, pointlist):
+    """method required polygonlist and pointlist to count the points in polygons
+    
+       Parameters
+        ----------
+        polygonlist : [shapely.geometry.Polygon]
+            A List of Polygons with [((x1,y1),..,(xn,yn)),((x1,y1),..,(xn,yn))] 
+        pointlist : [shapely.geometry.Point]
+            A List of Points with [(x1,y1),..,(xn,yn)]
+        
+        Returns
+        -------
+        list
+            a list of int values 
+    """
+    
+    #TODO: make a listcomp...
+    truelist = []
+    for polygon in polygonlist:
+        truelist.append([if_point_inpolygon(polygon,point) for point in pointlist])
+    return truelist
+
+def if_points_in_polygon(polygon, pointlist):
+    """method required polygonlist and pointlist to count the points in polygons
+    
+       Parameters
+        ----------
+        polygonlist : [shapely.geometry.Polygon]
+            A List of Polygons with [((x1,y1),..,(xn,yn)),((x1,y1),..,(xn,yn))] 
+        pointlist : [shapely.geometry.Point]
+            A List of Points with [(x1,y1),..,(xn,yn)]
+        
+        Returns
+        -------
+        list
+            a list of int values 
+    """
+    return [if_point_inpolygon(polygon,point) for point in pointlist]

@@ -66,9 +66,6 @@ def get_means_of_transport_graph(transport, enhance_with_speed=False):
                                                  place_name=PLACE_NAME,
                                                  custom_filter='["railway"~"tram|tram_stop"]["railway"!="tram_crossing"]["train"!="yes"]["station"!="subway"]["station"!="light_rail"]')
 
-        if transport in ["bus", "light_rail", "subway", "tram"]:
-            write_nodes_to_geojson(file_path="../results/stations-" + transport + ".geojson", g=g_transport)
-
         if enhance_with_speed:
             return enhance_graph_with_speed(g=g_transport, transport=transport)
         else:
@@ -90,7 +87,7 @@ def enhance_graph_with_speed(g, time_attribute='time', transport=None):
             speed = 31.0
         elif (transport == 'tram'):
             speed = 19.0
-        elif (transport == 'rail'):
+        elif (transport == 'light_rail'):
             speed = 38.0
 
         if speed is not None:
@@ -283,28 +280,6 @@ def write_coords_to_geojson(file_path, coords, travel_time_min):
         f.write("%s" % collection)
 
 
-def write_nodes_to_geojson(file_path, g):
-    if not path.exists(file_path):
-        print("Save " + file_path)
-
-        features = []
-
-        if len(g.nodes) > 0:
-            for node_id in g.nodes:
-                node = g.nodes[node_id]
-                feature = {}
-                feature["geometry"] = {"type": "Point", "coordinates": [node["x"], node["y"]]}
-                feature["type"] = "Feature"
-                features.append(feature)
-
-        collection = FeatureCollection(features)
-
-        with open(file_path, "w") as f:
-            f.write("%s" % collection)
-    else:
-        print("Exists " + file_path)
-
-
 def write_spatial_distances_to_file(file_path,
                                     mean_spatial_distances,
                                     median_spatial_distances,
@@ -327,7 +302,7 @@ def plot_graph(g):
 
 PLACE_NAME = "Berlin, Germany"
 TRAVEL_TIMES_MINUTES = [15]
-MEANS_OF_TRANSPORT = ["all", "bus", "light_rail", "subway", "tram", "bike"]
+MEANS_OF_TRANSPORT = ["all", "bike", "bus", "light_rail", "subway", "tram"]
 OVERRIDE_RESULTS = False
 
 # Load walk graph
