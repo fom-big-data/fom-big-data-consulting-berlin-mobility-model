@@ -1,7 +1,16 @@
-### Die Businfrastruktur gewährleistet eine zuverlässige Abdeckung lediglich im Stadtzentrum
+### Die Businfrastruktur ist im gesamten Stadtgebiet gleichmäßig durchwachsen
 
-Die Businfrastruktur bietet insbesondere den Bürger*innen im südwesten der Stadt, im Vergleich zum restlichen
-Stadtgebiet, eine verhältnismäßig gute Anbindung. In Teilen der Bezirke XX (Marker 1), YY (Marker 2), ZZ (Marker 3) 
-lassen sich mit dem Bus Distanzen von bis zu XX km innerhalb von nur 15 Minuten zurücklegen. Im gleichen Zeitraum 
-beträgt die durchschnittlich zurücklegbare Distanz in Teilen Kleinmachnows (Marker 4) lediglich XX km. Ähnlich verhält
-es sich mit der Busanbindung in Ahrensfelde mit XX km (Marker 5) und im Ortsteil Blankenfelde mit XX km (Marker 6).
+Während Bürger*innen mit dem Auto in 15 Minuten bis zu 13 Kilometer zurücklegen können, beträgt die maximale Distanz 
+mit dem Bus lediglich XX Kilometer. Dabei fällt auf, dass es keine signifikanten Unterschiede hinsichtlich der 
+Erreichbarkeit von Bushaltestellen im Stadtgebiet zu geben scheint. Im Vergleich mit anderen Verkehrsmitteln bietet der 
+Bus demnach zwar eine gleichbleibende, aber in Bezug auf die zurücklegbaren Distanzen auch stark limitierte Anbindung.
+Im Durchschnitt lässt sich mit dem Bus innerhalb von 15 Minuten eine Distanz von lediglich von ca. 2,9 Kilometer 
+zurücklegen.
+
+
+
+Die Analyse zeigt auch, dass die Anbindungsqualität in Richtung der Außenbezirke leicht abnimmt. Das kann insbesondere
+durch fehlende Umstiegsmöglichkeiten erklärt werden. Gebiete in den Außenbezirken werden häufig nur durch einzelne 
+Linien bedient, was sich negativ auf die Flexibilität und Erreichbarkeit auswirkt. Das wirkt insofern besonders schwer,
+als das es in den Außenbezirken an Alternativen mangelt. Wenn weder Bus, Straßenbahn noch U-Bahn oder S-Bahn eine
+zuverlässige Anbindung an den ÖPNV bieten, stellt der Individualverkehr häufig die einzige Alternative dar.
