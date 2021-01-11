@@ -1,5 +1,5 @@
 Die Flächen mit der höchsten Bevölkerungsdichte befinden sich in 
-<span class="marker-label" (mouseenter)="onMouseEnter('charlottenburg')" (mouseleave)="onMouseLeave('charlottenburg')">10623 Charlottenburg 
+<span class=marker-label (mouseenter)=onMouseEnter('charlottenburg') (mouseleave)=onMouseLeave('charlottenburg') >10623 Charlottenburg 
 (Marker X)</span>, 12107 Buckow-Lichtenrade-Mariendorf-Marienfelde-Tempelhof 
 <span id="marker-label-buckow-lichtenrade-mariendorf-marienfelde-tempelhof"> (Marker Y)</span> und 12623 Kaulsdorf-Mahlsdorf 
 <span id="marker-label-kaulsdorf-mahlsdorf">(Marker Z)</span>. 
