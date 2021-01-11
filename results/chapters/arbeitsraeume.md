@@ -1,10 +1,12 @@
 ### Arbeitsräume
 
-Neben den Lebensräumen der Menschen, stellen Arbeitsplätze und Einkaufsmöglichkeiten weitere wichtige 
-Eckpfeiler der urbanen Mobilität dar. Durch eine Visualisierung des Flächennutzungsplans wird deutlich, dass auch 
-sogenannte Handels- und Dienstleistungszentren dezentral über die Stadt verteilt sind. Nur wenige Bereiche, wie zum
-Beispiel der Bezirk Steglitz Zehlendorf im südwesten der Stadt sowie die Bezirk Treptow-Köpenick und der neuköllner
-Ortsteil Rudow weisen eine geringere Dichte an Handels- und Dienstleistungszentren auf. Auf der anderen Seite stechen 
-neben den Handels- und Dienstleistungszentren in den Innenstadtbezirken (bspw. Friedrichstraße) insbesondere die Bereiche
-Adlershof im Bezirk Treptow-Köpenick und Herzberge im Bezirk Lichtenberg, sowie Siemensstadt in Charlottenburg als große Handels- 
-und Dienstleistungszentren in den äußeren Bezirken heraus.
+Neben den dicht besiedelten Wohngebieten stellen Arbeitsplätze, Bildungseinrichtungen und Einkaufsmöglichkeiten weitere 
+wichtige Eckpfeiler der urbanen Mobilität dar. Durch die Visualisierung dieser Orte auf einer Karte wird deutlich, dass
+beispielsweise Handels- und Dienstleistungszentren sowie die Universitäten weitläufig über das Stadtgebiet verteilt sind
+, wobei ein besonders dichtes Handels- Dienstleistungsangebot in den zentralen Bezirken existiert. Nur wenige Bereiche, 
+wie zum Beispiel der Bezirk Steglitz-Zehlendorf im südwesten der Stadt sowie die Bezirk Treptow-Köpenick und der Ortsteil 
+Rudow im Bezirk Neukölln weisen ein besonders geringes Handels- und Dienstleistungsangebot auf. 
+
+Die Verteilung des Gewerbes verhält sich gegenläufig. Die großen Industriegebiete befinden sich eher in den 
+Außenbezirken, wo auch einige wichtige Bildungseinrichtungen verortet sind (bspw. Adlershof). Auffällig sind Gebiete im 
+Osten, Süden und Westen der Stadt, die sowohl Handel, Dienstleistung und Industrie aufweisen.
