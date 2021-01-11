@@ -8,13 +8,11 @@ Kieback&Peter GmbH, Linde Gas Deutschland und Terra Naturkost Handels KG angesie
 Konica Minolta Business Solutions Deutschland GmbH haben hier einen Standort. Zusätzlich zu dieser hohen Industrie- und 
 Gewerbedichte, weist das Gebiet auch eine verhältnismäßig hohe Einwohnerdichte auf. 
 
-Das aus der Gewerbe- und Einwohnerdichte resultierende Verkehrsaufkommen wir aktuell primär durch den motorisierten 
-Individualverkehr abgedeckt. Dafür ist die sehr gute Anbindung an die Berliner Stadtautobahn besonders hilfreich. 
-Bei näherer Betrachtung wird deutlich, dass hinsichtlich der Anbindung des Gewerbegebiets Gradestraße tatsächlich eine 
-starke Abhängigkeit vom motorisierten Individualverkehr besteht. Ausgehend von dem Gewerbegebiet ist fußläufig lediglich 
-die Buslinie 170 zu erreichen, die außerhalb der Stoßzeiten nur im 20 Minuten-Takt bedient wird. Die nächste 
-U-Bahnstation (Blaschkoallee) ist 26 Gehminuten entfernt. Die nächste S-Bahnstation (Hermannstraße) ist sogar 32 
-Gehminuten entfernt und somit in der Nutzung nicht mehr praktikabel.
+Bei näherer Betrachtung wird deutlich, dass die Anbindung des Gewerbegebiets Gradestraße von der guten 
+Erreichbarkeit der Stadtautobahn abhängt. Im Gegensatz dazu ist die Anbindung an den ÖPNV stark limitiert.
+Ausgehend von dem Gewerbegebiet ist lediglich die Buslinie 170 fußläufig zu erreichen, die außerhalb der Stoßzeiten nur 
+im 20 Minuten-Takt bedient wird. Die nächste U-Bahnstation (Blaschkoallee) ist 26 Gehminuten entfernt. Die nächste 
+S-Bahnstation (Hermannstraße) ist sogar 32 Gehminuten entfernt und somit in der Nutzung nicht mehr praktikabel.
 
 ### Lösungsansatz erhöhte Taktung und Buslinie
 Aktuell gibt es in Britz und dem Raum Gradestraße keine laufenden oder geplanten Infrastrukturprojekte. Um 
@@ -27,7 +25,7 @@ der S-Bahnstation Hermannstraße die Wegzeit deutlich verkürzen. Auf diese Weis
 steigen.
 
 ### Lösungsansatz Ausbau des Straßenbahnnetzes
-Im Rahmen der generellen Stärkung des ÖPNV-Netzes, die der Nahverkehrsplan des Landes Berlin in den kommenden Jahren 
+Im Rahmen der Stärkung des ÖPNV-Netzes, die der Nahverkehrsplan des Landes Berlin in den kommenden Jahren 
 vorsieht, könnte der Ausbau des Straßenbahn-Netzes im Süden des Bezirks Neukölln zu einer deutlichen Entspannung 
 der Verkehrssituation beitragen. Dies ist bereits als Bedarf in den längerfristigen Planungen aufgenommen und könnte 
 voraussichtlich ab 2023 umgesetzt werden.
