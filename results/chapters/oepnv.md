@@ -1,6 +1,8 @@
-### ÖPNV Infrastruktur
-Die Gesamtstrecke des ÖPNV beläuft sich auf 2.600 KM Länge. Mit 10 U-Bahn-, 22 Straßenbahn-, 6 Fähr-, 16 S-Bahn-
-und 21 Linien im Regionalverkehr sowie 6.516 Bushaltestellen sowie 173 U-Bahn- und 803 S-Bahnhöfe ist es das verfügt 
-Berlin im nationalen Vergleich über die größte ÖPNV-Infrastruktur. Bereits auf den ersten Blick fällt auf, dass das 
-Tram Netzwerk (in FARBE), welches mit ca. 418 KM Schiene immerhin ca. 17 % des Gesamtnetzes ausmacht, lediglich im Westen der Stadt 
-verfügbar ist.
+### ÖPNV-Infrastruktur
+Die Berliner ÖPNV-Infrastruktur umfasst U-Bahnen, Straßenbahnen, S-Bahnen und Buss. Die Gesamtstrecke des ÖPNV beläuft
+sich auf 2.600 KM Länge. Die U-Bahn allein umfasst 10 Linien die mit über 1.200 Wagen die 173 U-Bahnhöfe im Stadtgebiet 
+bedienen. Auf Ebene der Straßenbahn verkehren täglich 22 Linien mit 342 Fahrzeugen zwischen den 803 Haltestellen
+der Stadt. Während die Straßenbahnlinien lediglich in den östlichen Bezirken der Stadt zur Verfügung stellen, bietet 
+die Businfrastruktur eine flächendeckende Anbindung an das ÖPNV-Netz. Über das gesamte Stadtgebiet verteilt, stehen
+6.481 Bushaltestellen zur Verfügung die durch 154 Buslinien miteinander verbunden sind. Diese Infrastruktur der BVG 
+wird durch 16 S-Bahnlinien ergänzt, die 166 S-Bahnhöfe bedienen und durch die VBB betrieben werden.

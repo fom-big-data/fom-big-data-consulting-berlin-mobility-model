@@ -13,5 +13,3 @@ Infrastrukturprojekte geschaffen werden. Da der Autoverkehr nicht im Fokus der V
 Auto-Infrastruktur an dieser Stelle nicht weiter berücksichtigt. Für die Erstellung dieser übergreifenden Datenbasis 
 werden die vorhandenen Daten aller relevanten Verkehrsmittel miteinander verknüpft. Auf diese Weise wird sichergestellt, 
 dass auch Umstiege zwischen einzelnen Verkehrsmitteln bei der Berechnung von Isochronen berücksichtigt werden können.
-
-
