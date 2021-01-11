@@ -1,8 +1,8 @@
 ### Whitespot Marzahn-Hellersdorf
 
-Marzahn-Hellersdorf zeichnet sich durch eine Einwohnerdichte aus. Die Gewerbe- und Handelsdichte könnte als Durchschnittlich bezeichnet werden. Die größten hier ansässigen Arbeitgeber sind Harry, Coca Cola, Würth und die BVG mit dem Betriebsbahnhof für die Tram. Besonders die Unternehmen profitieren von einer guten Infrastruktur.
+Marzahn-Hellersdorf zeichnet sich durch eine recht hohe Einwohnerdichte aus. Die Gewerbe- und Handelsdichte könnte als durchschnittlich bezeichnet werden. Die größten hier ansässigen Arbeitgeber sind Harry, Coca Cola, Würth und die BVG mit dem Betriebsbahnhof für die Tram. Besonders die Unternehmen profitieren von einer guten Infrastruktur und die nähe zu den Lebensräumen.
 
-Durch eine durchschnittliche bis mangelhafte Anbindung an den ÖPNV entsteht eine hohe Abhängigkeit vom Individualverkehr. 
+Durch eine durchschnittliche bis mangelhafte Anbindung an den ÖPNV entsteht eine hohe Abhängigkeit vom Individualverkehr.
 
 ### Lösungsansatz 1
 Taktung der bereits bestehenden Bus- und Tram Linien erhöhen
