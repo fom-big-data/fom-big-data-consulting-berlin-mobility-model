@@ -1,8 +1,7 @@
 Die Flächen mit der höchsten Bevölkerungsdichte befinden sich in 
-<span class=marker-label (mouseenter)=onMouseEnter('charlottenburg') (mouseleave)=onMouseLeave('charlottenburg') >10623 Charlottenburg 
-(Marker X)</span>, 12107 Buckow-Lichtenrade-Mariendorf-Marienfelde-Tempelhof 
-<span id="marker-label-buckow-lichtenrade-mariendorf-marienfelde-tempelhof"> (Marker Y)</span> und 12623 Kaulsdorf-Mahlsdorf 
-<span id="marker-label-kaulsdorf-mahlsdorf">(Marker Z)</span>. 
+<span id="marker-label-charlottenburg">10623 Charlottenburg</span>, 
+<span id="marker-label-buckow-lichtenrade-mariendorf-marienfelde-tempelhof">12107 Buckow-Lichtenrade-Mariendorf-Marienfelde-Tempelhof</span> und 
+<span id="marker-label-kaulsdorf-mahlsdorf">12623 Kaulsdorf-Mahlsdorf</span>. 
 
 Die Abweichung zwischen den Flächen mit der höchsten, bzw. geringsten Bevölkerungsdichte beträgt lediglich <span class="todo">TODO
 </span>. Diese Dezentralität stellt eine Herausforderung für die berliner Verkehrsinfrastruktur dar. Anders als in stark zentralisierten
