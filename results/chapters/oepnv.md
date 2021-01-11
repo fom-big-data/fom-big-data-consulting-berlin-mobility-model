@@ -1,7 +1,7 @@
 ### ÖPNV-Infrastruktur
-Die Berliner ÖPNV-Infrastruktur umfasst U-Bahnen, Straßenbahnen, S-Bahnen und Busse. Die Gesamtstrecke des ÖPNV beläuft
-sich auf 2.600 Kilometer Länge. Die U-Bahn allein umfasst 10 Linien die mit über 1.200 Wagen, die 173 U-Bahnhöfe im 
-Stadtgebiet bedienen. Die U-bahnlinien konzentrieren sich vor allem auf die zentralen Bezirke. Auf der Karte wird 
+Die Berliner ÖPNV-Infrastruktur umfasst U-Bahnen, Straßenbahnen, S-Bahnen sowie Busse. Die Gesamtstrecke des ÖPNV 
+beläuft sich auf 2.600 Kilometer Länge. Die U-Bahn allein umfasst 10 Linien die mit über 1.200 Wagen, die 173 U-Bahnhöfe 
+im Stadtgebiet bedienen. Die U-bahnlinien konzentrieren sich vor allem auf die zentralen Bezirke. Auf der Karte wird 
 deutlich, dass es in diesen Bezirken viele Überschneidungen zwischen den einzelnen Linien gibt, wohingegen die 
 Außenbezirke in der Regel nur von einzelnen Linien bedient werden. Auf Ebene der Straßenbahn verkehren täglich 22 Linien 
 mit 342 Fahrzeugen zwischen den 803 Haltestellen der Stadt. Hier fällt auf, dass die Straßenbahnlinien lediglich in den 
