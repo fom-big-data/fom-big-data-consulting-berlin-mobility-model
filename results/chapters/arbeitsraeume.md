@@ -6,5 +6,5 @@ sogenannte Handels- und Dienstleistungszentren dezentral über die Stadt verteil
 Beispiel der Bezirk Steglitz Zehlendorf im südwesten der Stadt sowie die Bezirk Treptow-Köpenick und der neuköllner
 Ortsteil Rudow weisen eine geringere Dichte an Handels- und Dienstleistungszentren auf. Auf der anderen Seite stechen 
 neben den Handels- und Dienstleistungszentren in den Innenstadtbezirken (bspw. Friedrichstraße) insbesondere die Bereiche
-Adlershof und Herzberge im Bezirk Lichtenberg (PRÜFEN!) sowie Siemensstadt in Charlottenburg als große Handels- und 
-Dienstleistungszentren in den äußeren Bezirken heraus.
+Adlershof im Bezirk Treptow-Köpenick und Herzberge im Bezirk Lichtenberg, sowie Siemensstadt in Charlottenburg als große Handels- 
+und Dienstleistungszentren in den äußeren Bezirken heraus.
