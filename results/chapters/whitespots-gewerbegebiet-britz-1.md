@@ -2,7 +2,7 @@
 Der Ortsteil Britz zeichnet sich generell durch eine hohe Gewerbe- und Handelsdichte, eine relativ hohe 
 Bevölkerungsdichte und eine unzureichende Anbindung an den ÖPNV aus. Dabei kommt es auch innerhalb des weitläufigen 
 Ortsteils Britz noch zu Abstufungen. Anhand der genaueren Betrachtung von Gewerbedichte und Lücken innerhalb der 
-Verkehrsinfrastruktur konnte das <span class="marker-label" id="gewerbegebiet-britz">Gewerbegebiet an der Gradestraße</span>), 
+Verkehrsinfrastruktur konnte das <span class="marker-label" id="marker-label-gewerbegebiet-britz">Gewerbegebiet an der Gradestraße</span>, 
 Ecke Tempelhofer Weg identifiziert werden. In diesem Gewerbegebiet im nördlichen Britz, sind international agierende 
 Unternehmen und wichtige Arbeitgeber wie Kieback&Peter GmbH, Linde Gas Deutschland und Terra Naturkost Handels KG angesiedelt. Auch Unternehmen wie 
 Konica Minolta Business Solutions Deutschland GmbH haben hier einen Standort. Zusätzlich zu dieser hohen Industrie- und 
