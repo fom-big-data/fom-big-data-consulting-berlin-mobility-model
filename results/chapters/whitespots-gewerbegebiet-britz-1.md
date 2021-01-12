@@ -8,8 +8,13 @@ Unternehmen und wichtige Arbeitgeber wie Kieback&Peter GmbH, Linde Gas Deutschla
 Konica Minolta Business Solutions Deutschland GmbH haben hier einen Standort. Zusätzlich zu dieser hohen Industrie- und 
 Gewerbedichte, weist das Gebiet auch eine verhältnismäßig hohe Einwohnerdichte auf. 
 
+
+
+
 Bei näherer Betrachtung wird deutlich, dass die Anbindung des Gewerbegebiets Gradestraße von der guten 
 Erreichbarkeit der Stadtautobahn abhängt. Im Gegensatz dazu ist die Anbindung an den ÖPNV stark limitiert.
-Ausgehend von dem Gewerbegebiet ist lediglich die Buslinie 170 fußläufig zu erreichen, die außerhalb der Stoßzeiten nur 
-im 20 Minuten-Takt bedient wird. Die nächste U-Bahnstation (Blaschkoallee) ist 26 Gehminuten entfernt. Die nächste 
-S-Bahnstation (Hermannstraße) ist sogar 32 Gehminuten entfernt und somit in der Nutzung nicht mehr praktikabel.
+Ausgehend von dem Gewerbegebiet ist lediglich die <span class="marker-label" id="marker-label-bus-gradestrasse">Buslinie 170</span>  
+fußläufig zu erreichen, die außerhalb der Stoßzeiten nur im 20 Minuten-Takt bedient wird. 
+Die U-Bahnstationen <span class="marker-label" id="marker-label-u-blaschkoallee">Blaschkoallee</span> und 
+<span class="marker-label" id="marker-label-u-ullsteinstrasse">Ullsteinstraße</span> sind je 26 Gehminuten entfernt. Die nächste 
+S-Bahnstation (<span class="marker-label" id="marker-label-s-hermannstrasse">Hermannstraße</span>) ist sogar 32 Gehminuten entfernt und somit in der Nutzung nicht mehr praktikabel.
