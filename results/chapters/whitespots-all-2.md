@@ -1,7 +1,12 @@
 Ausgehend von der Betrachtung der einzelnen Ebenen ist es nicht überraschend, dass sich die Orte mit der verhältnismäßig 
-besten Anbindung in den zentralen Bezirken befinden. Insbesondere die Bürger*innen im Ortsteil Gesundbrunnen (Marker 1)
-und im angrenzenden Arnimkiez (Marker 2) haben bereits heute Zugang zu einer engmaschigen Verkehrsinfrastruktur. 
-Gleiches gilt für das Gebiet um die Friedrichstraße und das westliche Ende der Torstraße (Maker 3) sowie das Gebiet 
-um den S-Bahnhof Potsdamer Platz (Marker 4). Auch im südosten der ist grundsätzlich eine dichte Verkehrsinfrastruktur
-gegeben. Dabei stechen insbesondere die Gebiete um den Bahnhof Ostkreuz (Marker 5) und den S-Bahnhof 
-Baumschulenweg (Marker 6) sowie das Gebiet zwischen den S-Bahnhöfen Neukölln und Hermannstraße (Marker 7) hervor.
+besten Anbindung in den zentralen Bezirken befinden. Insbesondere die Bürger*innen im Ortsteil 
+<span class="marker-label" id="marker-label-gesundbrunnen">Gesundbrunnen</span>
+und im angrenzenden <span class="marker-label" id="marker-label-arnimkiez">Arnimkiez</span> haben bereits heute Zugang zu einer
+ engmaschigen Verkehrsinfrastruktur. 
+Gleiches gilt für das Gebiet um die Friedrichstraße und das westliche Ende der 
+<span class="marker-label" id="marker-label-torstrasse">Torstraße</span> sowie das Gebiet 
+um den <span class="marker-label" id="marker-label-potsdamer-platz">Bahnhof Potsdamer Platz</span>. Auch im Südosten der Stadt ist
+ grundsätzlich eine dichte Verkehrsinfrastruktur gegeben. Dabei stechen insbesondere die Gebiete um den 
+ <span class="marker-label" id="marker-label-ostkreuz">Bahnhof Ostkreuz</span> und
+  den <span class="marker-label" id="marker-label-baumschulenweg">Bahnhof Baumschulenweg</span> sowie das Gebiet zwischen den 
+  <span class="marker-label" id="marker-label-neukoelln">Bahnhöfen Neukölln und Hermannstraße</span> hervor.
