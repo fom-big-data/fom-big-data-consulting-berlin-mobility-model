@@ -1,6 +1,8 @@
 ### Industriestandort Spandau
 
-Im östlichen Teil <span class="marker-label" id="marker-label-whitespot-spandau"> Spandaus </span> gibt es eine sehr hohe Gewerbedichte. Neben dem <span class="marker-label" id="marker-label-polizeiakademie">Ausbildungszentrum der Berliner Polizei</span> befinden sich hier unter anderem mehrere Möbelhäuser, zwei Kraftwerke, ein Zementwerk und ein Klärwerk. Im direkten Umfeld ist die Bevölkerungsdichte relativ niedrig. Da sich hier jedoch die direkten Pendlerrouten aus dem stark bevölkerten Teil Spandaus und Falkensee schneiden, entsteht hier ein besonders hohes Pendler-Aufkommen sowohl in die Stadt hinein als auch aus der Stadt heraus. Laut dem Nahverkehrsplan des Landes Berlin befindet sich hier einer der am meisten ausgelasteten Netzbereiche.
+Im östlichen Teil Spandaus gibt es eine sehr hohe Gewerbedichte. Neben dem <span class="marker-label" id="marker-label
+-whitespot-polizeiakademie">Ausbildungszentrum der Berliner Polizei</span> befinden sich hier unter anderem mehrere Möbelhäuser, zwei
+ Kraftwerke, ein Zementwerk und ein Klärwerk. Im direkten Umfeld ist die Bevölkerungsdichte relativ niedrig. Da sich hier jedoch die direkten Pendlerrouten aus dem stark bevölkerten Teil Spandaus und Falkensee schneiden, entsteht hier ein besonders hohes Pendler-Aufkommen sowohl in die Stadt hinein als auch aus der Stadt heraus. Laut dem Nahverkehrsplan des Landes Berlin befindet sich hier einer der am meisten ausgelasteten Netzbereiche.
 
 Für den motorisierten Individualverkehr und den Busverkehr bildet der verlängerte Spandauer Damm die Hauptverkehrsader. Durch das hohe Pendleraufkommen reduziert sich jedoch die Durchschnittsgeschwindigkeit des Verkehrs gerade zu den Stoßzeiten merklich.
 
