@@ -11,8 +11,6 @@ Bis im Jahr 1929 existierten in Berlin noch 93 Straßenbahnlinien, die weite Tei
 
 
 Die historische Trennung der Stadt in West- und Ost-Berlin wird auch anhand der Karte deutlich. Bis heute verläuft im Westen der Stadt
- keine Straßenbahnlinie, sodass die Anbindung des westlichen Stadtgebiets an das Straßenbahnnetz nicht gewährleistet ist. Die mit der
-  Straßenbahn erreichbaren Gebiete befinden sich in <span class="todo">XX (Marker 1), YY (Marker 2), ZZ(marker 3)</span>. Die Analyse
-   mithilfe der Isochrone zeigt, dass ausgehend von diesem Orten im östlichen Stadtgebiet, eine Strecke von bis zu <span class="todo">XX
-   </span> Kilometern in 15 Minuten zurückgelegt werden kann. Im gesamten westlichen Stadtgebiet entspricht die Anbindungsqualität der Fu
+ keine Straßenbahnlinie, sodass die Anbindung des westlichen Stadtgebiets an das Straßenbahnnetz nicht gewährleistet ist. Die Analyse
+   mithilfe der Isochrone zeigt, eine Strecke von maximal 4,6 und durchschnittlich 3,9 Kilometern in 15 Minuten zurückgelegt werden kann. Im gesamten westlichen Stadtgebiet entspricht die Anbindungsqualität der Fu
    ßgeschwindigkeit, da innerhalb von 15 Minuten kein Straßenbahnhalt erreichbar ist.
