@@ -7,5 +7,5 @@
 ---
 
 * **Wege in der Stadt** Wohnt am <span class="marker-label" id="marker-label-whitespot-persona-hanna">Westhafen</span> und arbeitet als 
-Verkäuferin bei <span class="marker-label" id="marker-label-whitespot-landsberger-allee">IKEA</span>
+Verkäuferin bei <span class="marker-label" id="marker-label-whitespot-persona-hanna-target">IKEA</span>
 * **Besondere Anforderungen** Arbeitet im Schichtdienst und muss außerhalb der Öffnungszeiten pendeln 
