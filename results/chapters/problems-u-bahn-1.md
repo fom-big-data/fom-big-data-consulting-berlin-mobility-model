@@ -12,4 +12,4 @@ Aus der Karte auf der rechten Seit geht eindeutig hervor, dass die U-Bahn insbes
  -Bahnlinien in Teilen der <span class="marker-label" id="marker-label-subway-friedrichshain">Bezirke Friedrichshain</span>, 
  <span class="marker-label" id="marker-label-subway-mitte">Mitte</span> und 
  <span class="marker-label" id="marker-label-subway-charlottenburg-wilmersdorf">Charlottenburg-Wilmersdorf</span>. In diesen
-  zentralen Bezirken lassen sich mit der U-Bahn innerhalb von 15 Minuten bis zu <span class="todo">XX</span> Kilometer zurücklegen. 
+  zentralen Bezirken lassen sich mit der U-Bahn innerhalb von 15 Minuten bis zu 7,2 Kilometer zurücklegen. 
