@@ -1,11 +1,11 @@
-## Peter Peters ist als Berater vor 10 Jahren in die Nähe des Flughafens gezogen, heute reist er häufig über den Hauptbahnhof.
+## Ben Bäcker pendelt jeden Tag vom Gesundbrunnen zur Polizeiakademie nach Spandau und ist auf ÖPNV angewiesen.
 
-* **Name** Peter Peters
-* **Alter** 35
-* **Beruf** Berater
+* **Name** Ben Bäcker
+* **Alter** 21
+* **Beruf** Student
 
 ---
 
-* **Wege in der Stadt** Pendelt in 16 Min. mit eigenem E-Scooter aus Charlottenburg Nord zum Hauptbahnhof
-* **Besondere Anforderungen** Fährt oft sehr früh zu Kundenterminen und kommt oft erst spät am Hauptbahnhof an
-
+* **Wege in der Stadt** Wohnt am <span class="marker-label" id="marker-label-whitespot-persona-ben">Gesundbrunnen, pendelt in 50 Min. mit
+ Bus und Ringbahn zur Polizeiakademie
+* **Besondere Anforderungen** Auf ÖPNV angewiesen: Budget erlaubt kein eigenes Auto, obwohl es die Dauer seines tägl. Weges halbieren würde
