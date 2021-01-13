@@ -9,5 +9,7 @@ Eingangs fällt auf, dass es im Gegensatz zur S-Bahn ein deutlich geringeres Gef
 
 Aus der Karte auf der rechten Seit geht eindeutig hervor, dass die U-Bahn insbesondere in den zentralen Bezirken eine hohe Anbindung
  sicherstellt. Dabei sorgt insbesondere der Verlauf der Linie U1 für eine hohe Interkonnektivität zwischen einer Vielzahl von U
- -Bahnlinien in Teilen der Bezirke Friedrichshain (Marker 1), Mitte (Marker 2) und Charlottenburg-Wilmersdorf (Marker 3). In diesen
+ -Bahnlinien in Teilen der <span class="marker-label" id="marker-label-subway-friedrichshain">Bezirke Friedrichshain</span>, 
+ <span class="marker-label" id="marker-label-subway-mitte">Mitte</span> und 
+ <span class="marker-label" id="marker-label-subway-charlottenburg-wilmersdorf">Charlottenburg-Wilmersdorf</span>. In diesen
   zentralen Bezirken lassen sich mit der U-Bahn innerhalb von 15 Minuten bis zu <span class="todo">XX</span> Kilometer zurücklegen. 

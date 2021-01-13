@@ -1,6 +1,6 @@
 ### Whitespot Marzahn-Hellersdorf
 
-Marzahn-Hellersdorf zeichnet sich durch eine Einwohnerdichte aus. Die Gewerbe- und Handelsdichte könnte als Durchschnittlich bezeichnet
+Marzahn-Hellersdorf zeichnet sich durch eine Einwohnerdichte aus. Die Gewerbe- und Handelsdichte könnte als durchschnittlich bezeichnet
  werden. Die größten hier ansässigen Arbeitgeber sind Harry, Coca Cola, Würth und die BVG mit dem Betriebsbahnhof für die Tram. Besonders
   die Unternehmen profitieren von einer guten Infrastruktur.
 

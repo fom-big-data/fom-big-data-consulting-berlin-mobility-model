@@ -9,5 +9,5 @@ Rudow im Bezirk Neukölln weisen ein besonders geringes Handels- und Dienstleist
 
 Die Verteilung des Gewerbes verhält sich gegenläufig. Die großen Industriegebiete befinden sich eher in den 
 Außenbezirken, wo auch einige wichtige Bildungseinrichtungen verortet sind (bspw. 
-<span class="marker-label" id="marker-label-tec-adlershof">Adlershof</span>). Auffällig sind Gebiete im 
+<span class="marker-label" id="marker-label-working-space-adlershof">Adlershof</span>). Auffällig sind Gebiete im 
 Osten, Süden und Westen der Stadt, die sowohl Handel, Dienstleistung und Industrie aufweisen.
