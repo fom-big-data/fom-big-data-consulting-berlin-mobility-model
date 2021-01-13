@@ -1,7 +1,7 @@
 ### Die Businfrastruktur ist im gesamten Stadtgebiet gleichmäßig durchwachsen
 
 Während Bürger*innen mit dem Auto in 15 Minuten bis zu 13 Kilometer zurücklegen können, beträgt die maximale Distanz 
-mit dem Bus lediglich 4,73 Kilometer. Dabei fällt auf, dass es keine signifikanten Unterschiede hinsichtlich der 
+mit dem Bus lediglich 4,7 Kilometer. Dabei fällt auf, dass es keine signifikanten Unterschiede hinsichtlich der 
 Erreichbarkeit von Bushaltestellen im Stadtgebiet zu geben scheint. Im Vergleich mit anderen Verkehrsmitteln bietet der Bus demnach zwar
  eine gleichbleibende, aber in Bezug auf die zurücklegbaren Distanzen auch stark limitierte Anbindung. Im Durchschnitt lässt sich mit dem
   Bus innerhalb von 15 Minuten eine Distanz von lediglich von ca. 2,9 Kilometer zurücklegen.

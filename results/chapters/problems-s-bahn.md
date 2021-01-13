@@ -8,7 +8,7 @@ Anders als beispielweise bei Betrachtung der Businfrastruktur, fällt bei der Vi
   S-Bahnhof Friedrichstraße</span> mit Zugang zu den Linien S3, S5, S1 und
    S25 sowie das Gebiet um den <span class="marker-label" id="marker-label-light-rail-ostkreuz">Bahnhof Ostkreuz</span> mit direktem
     Zugang zu den Linien S3, S5, S75, S41 und S42. Ausgehend von
-    diesen Gebieten können Bürger*innen innerhalb von 15 Minuten bis zu 9,9 Kilometer mit der S-Bahn zurücklegen
+    diesen Gebieten können Bürger*innen innerhalb von 15 Minuten bis zu 8 Kilometer mit der S-Bahn zurücklegen
     . Das ist vergleichbar mit der maximalen Strecke, die mit dem Auto im gleichen Zeitraum zurückgelegt werden kann. 
 
 Im Gegensatz zu den gut angebundenen Gebieten fällt auf, dass Bürger*innen im Süden des Bezirks 
