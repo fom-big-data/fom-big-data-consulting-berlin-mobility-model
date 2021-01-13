@@ -1,6 +1,6 @@
 ### Urban Tech Republic - TXL
-Als Mischung aus Wohn- und Gewerbegebiet entsteht in <span class="marker-label" id="marker-whitespot-charlottenburg-nord">
-Charlottenburg-Nord viel Pendelverkehr</span>. Nahe des ehemaligen Flughafens TXL sind eine große Zahl von Logistik- und Import-/Export
+Als Mischung aus Wohn- und Gewerbegebiet entsteht in <span class="marker-label" id="marker-label-whitespot-charlottenburg-nord">
+Charlottenburg-Nord</span> viel Pendelverkehr. Nahe des ehemaligen Flughafens TXL sind eine große Zahl von Logistik- und Import-/Export
 -Unternehmen ansässig - unter Anderem DPD, DB-Schenker und TNT. Die Bewohnerzahl von Charlottenburg-Nord liegt im Stadt-Durchschnitt.
 
 Trotz geografischer Nähe zur Ringbahn hat dieser Whitespot durch eine geringe Stationsdichte eine schlechte Anbindung zum ÖPNV. Lediglich
