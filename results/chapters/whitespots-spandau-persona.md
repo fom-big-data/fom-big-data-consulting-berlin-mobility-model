@@ -6,6 +6,6 @@
 
 ---
 
-* **Wege in der Stadt** Wohnt am <span class="marker-label" id="marker-label-whitespot-persona-ben">Gesundbrunnen, pendelt in 50 Min. mit
- Bus und Ringbahn zur Polizeiakademie
+* **Wege in der Stadt** Wohnt am <span class="marker-label" id="marker-label-whitespot-persona-ben">Gesundbrunnen</span>, pendelt in 50 Min
+. mit Bus und Ringbahn zur Polizeiakademie
 * **Besondere Anforderungen** Auf ÖPNV angewiesen: Budget erlaubt kein eigenes Auto, obwohl es die Dauer seines tägl. Weges halbieren würde
