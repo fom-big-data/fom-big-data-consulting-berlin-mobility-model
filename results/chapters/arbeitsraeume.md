@@ -14,5 +14,5 @@ befinden sich in den Außenbezirken. In den Außenbezirken liegen Gewerbegebiete
 zu Bildungseinrichtungen. Das ist beispielsweise in 
 <span class="marker-label" id="marker-label-working-space-adlershof">Adlershof</span> der Fall.
 Auffällig sind zudem Gebiete wie der
-<span class="marker-label" id="marker-working-space-mariendorf">Gewerbe und Technologiepark</span> im Osten, 
+<span class="marker-label" id="marker-label-working-space-mariendorf">Gewerbe und Technologiepark</span> im Osten, 
 Süden und Westen der Stadt, die sowohl Handel, Dienstleistung und Industrie aufweisen.
