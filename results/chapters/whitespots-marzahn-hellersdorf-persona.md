@@ -6,7 +6,7 @@
 
 ---
 
-* **Wege in der Stadt** Wohnt <span class="marker-label" id="marker-label-whitespot-persona-birgit">im Kiez</span> und engagiert sich beim
- DRK und Klub74 e.V. 
+* **Wege in der Stadt** Wohnt <span class="marker-label" id="marker-label-whitespot-persona-birgit">im Helelrsdorfer Kiez</span> und engagiert sich beim DRK und Klub74 e.V. Sie möchte unproblematisch auch in die Stadt zum Shoppen.
+
 * **Besondere Anforderungen** Fährt am häufigsten mit Bus und Straßenbahn. Selten nimmt sie die S- oder U-Bahn wegen der vielen Treppen.
 
