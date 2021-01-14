@@ -6,11 +6,4 @@ Die größten hier ansässigen Arbeitgeber sind Harry, Coca Cola, Würth und die
  . Besonders die Unternehmen profitieren von einer guten Infrastruktur und die nähe zu den Lebensräumen.
 
 Durch eine durchschnittliche bis mangelhafte Anbindung an den ÖPNV entsteht eine hohe Abhängigkeit vom Individualverkehr.
-Diesen will aber Bitgit nicht mehr nutzen
-
-### Lösungsansatz 1
-Taktung der bereits bestehenden Bus- und Tram Linien erhöhen
-
-### Lösungsansatz 2
-Mikromobilitätangebote wie Leihfahrräder oder e Scooter fördern.
-Der Weg zur nächsten S- oder U-Bahn ist nicht zu Fuß in 15min und nur mit Aufwand mit dem Fahrrad erreichbar
+Diesen will aber Bitgit nicht mehr nutzen. Genauso geht sie auch nicht mehr arbeiten engagiert sich aber beim <span class="marker-label" id="marker-label-whitespot-persona-birgit-drk">Deutschen Roten Kreuz</span> und der <span class="marker-label" id="marker-label-whitespot-persona-birgit-klub74">Nachbarschafthilfe Klub 74 e.V.</span>. Beides sind für sie die Tätigkeiten in der Woche. Erreichen kann sie diese Kiez nahmen und sozialen Begegnungstätten in mehr als 30 Minuten.

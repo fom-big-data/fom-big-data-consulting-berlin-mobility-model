@@ -1,27 +1,12 @@
-### Placeholder
+### Lösungen für das Lebensalter
 
-## Umgestalten TODO Lösungsansatz
-KiezKlub und DRK abbilden sowie die wichtigsten BUS und TRAM stationen + andere soziale begenungsstetten
-
-
-X69, TXL oder sogenannte Expressbusse um Personen zu den Verkehrsmitteln mit einer höheren Reichweite zu befördern.
-Taktung erhöhen.
-
-erreichbarkeiten zu Fuß und Fahhrad
-
-Marker Econopark einbauen nahe dem DRK
-Marker DRK
-13.557729758720171
-52.55546732379629 
-
-Kiez74
-
-Gärten der Welt als Zentrum
-
+Durch den demografischen Wandel müssen auch ältere Menschen berücksichtigt werden. Dazu können die bereits gut ausgebauten und Verfügbaren Haltestellen genutzt werden. Auch Hubs wären in Zukunft denkbar. Dazu bietet sich eine eventuelle Kooperation mit dem Betriebsbahnhof der BVG an. 
 
 ### Lösungsansatz 1
-Taktung der bereits bestehenden Bus- und Tram Linien erhöhen
+* Taktung der bereits bestehenden Bus- und Tram Linien erhöhen
+* Expressbuslinien (Bsp. X69) einführen die die Verkehrsadern bzw. großen Bahnhöfe ansteuern
+
 
 ### Lösungsansatz 2
-Mikromobilitätangebote wie Leihfahrräder oder e Scooter fördern.
-Der Weg zur nächsten S- oder U-Bahn ist nicht zu Fuß in 15min und nur mit Aufwand mit dem Fahrrad erreichbar
+* Mikromobilitätangebote wie Leihfahrräder oder e Scooter fördern (Stichwort Betriebsbahnhof der BVG).
+* Möglichkeiten zum sicheren abstellen des Fahrrades am Bahnhof. Der Weg zur nächsten U-Bahn ist gerade so für junge Menschen mit einer Schrittgeschwindigkeit von 6 km/h die Stunde in 15min zur erreichen.
