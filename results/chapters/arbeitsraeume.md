@@ -15,4 +15,4 @@ Wie in <span class="marker-label" id="marker-label-working-space-adlershof">Adle
 häufiger in unmittelbarer Nähe zu Bildungseinrichtungen. 
 Auffällig sind zudem Gebiete wie der 
 <span class="marker-label" id="marker-label-working-space-mariendorf">Gewerbe und Technologiepark</span> 
-im Osten der Stadt, die sowohl Handel, Dienstleistung und Industrie aufweisen.
+im Süden der Stadt, die sowohl Handel, Dienstleistung und Industrie aufweisen.
