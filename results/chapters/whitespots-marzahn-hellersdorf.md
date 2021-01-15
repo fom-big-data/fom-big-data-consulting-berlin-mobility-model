@@ -1,4 +1,4 @@
-### Whitespot Marzahn-Hellersdorf
+### ÖPNV und Fahrrad Infrastruktur von Marzahn-Hellersdorf
 
 Die Anbindung des **ÖPNV** kann als **durchschnittlich** angesehen werden. Die Nutzung des Fahrrads ist immer mit einem erheblichen Risiko verbunden, da sie sich größtenteils auf den Verkehrsstraßen bewegen muss. Denn **dedizierte Radwege sind nicht konsitent ausgebaut**. Sie engagiert sich beim <span class="marker-label" id="marker-label-whitespot-persona-birgit-drk">Deutschen Roten Kreuz</span> und der <span class="marker-label" id="marker-label-whitespot-persona-birgit-klub74">Nachbarschafthilfe Klub 74 e.V.</span>. Beides sind für sie regelmäßige Tätigkeiten in der Woche. Erreichen kann sie diese Kiez nahmen und sozialen Begegnungstätten in mehr als 30 Minuten mit den öffentlichen oder in ungefähr 15 Minuten mit dem Fahrrad.
 
