@@ -11,4 +11,4 @@ Des Weiteren können durch geringe infrastrukturelle Änderungen das Medium Fahr
 
 * **Mikromobilitätsangebote** wie Leihfahrräder oder e Scooter fördern oder Hubs einrichten, Stichwort Betriebsbahnhof der BVG
 
-* Möglichkeiten zum **sicheren abstellen** des Fahrrades am Bahnhof. Der Weg zur nächsten U-Bahn ist gerade so für junge Menschen mit einer Schrittgeschwindigkeit von 6 km/h in 15min zu erreichen.
+* Möglichkeiten zum **sicheren abstellen des Fahrrades** am Bahnhof. Der Weg zur nächsten U-Bahn ist gerade so für junge Menschen mit einer Schrittgeschwindigkeit von 6 km/h in 15min zu erreichen.
