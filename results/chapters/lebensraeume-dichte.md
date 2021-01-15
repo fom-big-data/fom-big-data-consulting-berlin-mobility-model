@@ -1,13 +1,15 @@
-Durch eine Betrachtung der Einwohnerdichte auf Bezirksebene lassen sich weitere Rückschlüsse auf die Verteilung von
-Bürger*innen über das Stadtgebiet ziehen. Ein Blick auf die Karte zeigt, dass die zentralen Bezirke der Stadt besonders
-dicht besiedelt sind. 
+#### Die Einwohnerdichte der Berliner Bezirke im Vergleich 
+Durch die zusätzliche Betrachtung der Einwohnerdichte können Rückschlüsse auf die tatsächliche Verteilung von 
+Bürger*innen im Stadtgebiet gezogen werden. Ein Blick auf die Karte zeigt, dass **die zentralen Bezirke der Stadt 
+besonders dicht besiedelt** sind.
 
 Die Flächen mit der höchsten Bevölkerungsdichte befinden sich in 
 <span class="marker-label" id="marker-label-habitat-charlottenburg">10623 Charlottenburg</span>, 
-<span class="marker-label" id="marker-label-habitat-buckow-lichtenrade-mariendorf-marienfelde-tempelhof">12107 Buckow-Lichtenrade-Mariendorf-Marienfelde-Tempelhof</span> und 
-<span class="marker-label" id="marker-label-habitat-kaulsdorf-mahlsdorf">12623 Kaulsdorf-Mahlsdorf</span>. 
+<span class="marker-label" id="marker-label-habitat-buckow-lichtenrade-mariendorf-marienfelde-tempelhof">12107 Mariendorf im Ortsteil Tempelhof-Schöneberg</span> 
+und <span class="marker-label" id="marker-label-habitat-kaulsdorf-mahlsdorf">12623 Kaulsdorf-Mahlsdorf</span>.
 
-Die großräumig geschnittenen Wohngebiete in den Außenbezirken weisen im Vergleich zu den zentralen Bezirken eine 
-deutlich geringere Einwohnerdichte auf. Aufgrund der größeren Fläche weisen auch die Außenbezirke hohe Einwohnerzahlen 
-auf. Diese Dezentralität stellt eine Herausforderung für die berliner Verkehrsinfrastruktur dar. Anders als in stark 
-zentralisierten Städten, gilt es in Berlin die Anbindung der vielen Kieze untereinander sicherzustellen. 
+Die Wohngebiete in den Außenbezirken weisen im Vergleich zu den zentralen Bezirken zwar eine deutlich geringere 
+Einwohnerdichte auf, machen aber aufgrund der größeren Fläche einen beträchtlichen Anteil der Einwohnerzahlen aus. 
+Diese **Dezentralität stellt eine Herausforderung für die Berliner Verkehrsinfrastruktur dar**. Anders als in stark 
+zentralisierten Städten, gilt es in Berlin die Anbindung vieler Kieze in einem großen Stadtgebiet auch untereinander 
+sicherzustellen.
