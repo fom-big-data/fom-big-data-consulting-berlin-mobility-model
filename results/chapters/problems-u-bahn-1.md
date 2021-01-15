@@ -11,6 +11,6 @@ Fußgeschwindigkeit stärker zum Tragen käme.
 Die Berechnung der Anbindungsqualität zeigt, dass die U-Bahn in den zentralen Bezirken eine verlässliche Anbindung 
 sicherstellt. Dabei sorgt beispielsweise die Linie U1 für eine hohe Interkonnektivität zwischen den 
 U-Bahnlinien in den Bezirke <span class="marker-label" id="marker-label-subway-friedrichshain">Friedrichshain</span>, 
-<span class="marker-label" id="marker-label-subway-mitte">Mitte</span> und 
+<span class="marker-label" id="marker-label-subway-kreuzberg">Kreuzberg</span> und 
 <span class="marker-label" id="marker-label-subway-charlottenburg-wilmersdorf">Charlottenburg-Wilmersdorf</span>. 
 **In diesen zentralen Bezirken lassen sich mit der U-Bahn innerhalb von 15 Minuten bis zu 7,2 Kilometer zurücklegen**.
