@@ -10,7 +10,7 @@ des Gewerbegebiets Gradestraße ist jedoch mangelhaft.
 Die Anbindung des Gewerbegebiets Gradestraße hängt stark von der guten Erreichbarkeit der Stadtautobahn ab. 
 **Die Anbindung an den ÖPNV ist stark limitiert**. Ausgehend von dem Gewerbegebiet sind die 
 <span class="marker-label" id="marker-label-bus-gradestrasse">Buslinien 170</span> und 
-<span class="marker-label" id="marker-label-bus- eintrachtsiedlung ">M44</span> fußläufig erreichbar. 
+<span class="marker-label" id="marker-label-bus-eintrachtsiedlung ">M44</span> fußläufig erreichbar. 
 **Die Buslinie 170 wird außerhalb der Stoßzeiten nur im 20 Minuten-Takt bedient und selbst die regelmäßiger 
 verkehrende Linie M44 bietet keine ausreichende Anbindung an den ÖPNV**. Die U-Bahnstationen 
 <span class="marker-label" id="marker-label-u-blaschkoallee">Blaschkoallee</span> und 
