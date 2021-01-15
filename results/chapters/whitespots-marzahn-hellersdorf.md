@@ -1,10 +1,14 @@
-### ÖPNV und Fahrrad Infrastruktur von Marzahn-Hellersdorf
+### Der dicht besiedelte Osten Marzahn-Hellersdorfs
 
-Die Anbindung des **ÖPNV** kann als **durchschnittlich** angesehen werden. Die Nutzung des Fahrrads ist immer mit einem erheblichen Risiko verbunden, da sie sich größtenteils auf den Verkehrsstraßen bewegen muss. Denn **dedizierte Radwege sind nicht konsitent ausgebaut**. Sie engagiert sich beim <span class="marker-label" id="marker-label-whitespot-persona-birgit-drk">Deutschen Roten Kreuz</span> und der <span class="marker-label" id="marker-label-whitespot-persona-birgit-klub74">Nachbarschafthilfe Klub 74 e.V.</span>. Beides sind für sie regelmäßige Tätigkeiten in der Woche. Erreichen kann sie diese Kiez nahmen und sozialen Begegnungstätten in mehr als 30 Minuten mit den öffentlichen oder in ungefähr 15 Minuten mit dem Fahrrad.
+Der östliche Teil Marzahn-Hellersdorfs ist von einer sehr hohen Einwohnerdichte geprägt. Die **ÖPNV-Anbindung** in diesem Gebiet 
+ist stark von der Straßenbahninfrastruktur geprägt. Die Straßenbahnhaltestellen MARKER FÜR DIE STRAßENBAHN HALTESTELLEN HIER EINFÜGEN
+bieten eine gute Anbindung innerhalb des Kiezes. Gebiete die außerhalb des Straßenbahnnetzes liegen, sind vom östlichen Rand 
+Marzahn-Hellersdorfs jedoch kaum erreichbar. Die nächste S-Bahnstation MARKER HIER EINFÜGEN ist mit dem Bus XX Minuten entfernt. Bus zur nächstgelegene U-Bahn Station MARKER HIER EINFÜGEN 
+sind mindestens 15 Minuten mit dem Bus einzuplanen. 
 
-### Wenn es in die Innenstadt geht
+Davon sind Arbeitnehmer*innen die in anderen Bezirken tätig sind besonders betroffen. 
+Aber auch Senior*innen die sich innerhalb des Bezirks bewegen und beispielsweise in der Nachbarschaft engagieren, stehen vor großen
+Herausforderungen. Wichtige Begegnungsstätten, wie das <span class="marker-label" id="marker-label-whitespot-persona-birgit-drk">Deutsche Rote Kreuz</span> 
+und der <span class="marker-label" id="marker-label-whitespot-persona-birgit-klub74">Nachbarschaftshilfe Klub 74 e.V.</span> sind mit dem ÖPNV nicht in unter
+30 Minuten zu erreichen. Weitere Wege, beispielsweise bis zum Alexanderplatz, sind zwar mit der Straßenbahn erreichbar, setzen aber eine Reisezeit von mindestens 45 Minuten voraus.
 
-Wenn Birgit in die Stadt will, um Shoppen zu gehen oder ihre Ur-Enkelin im Süd-Osten besuchen möchte, muss sie Fahrtwege von etwas mehr als 45 Minuten auf sich nehmen. Zum **Alexanderplatz** kommt sie mit der **Tramlinie M6** in ca. **45 Minuten**. Zu Ihrer Ur-Enkelin kann sie ebenfalls in ungefähr 45 Minuten da sein. Die Verbindung beider Strecken würde eine ungefähre Fahrtzeit am Tag von 2,5 bis 3 Stunden ergeben.
-
-Die nächst gelegene **U-Bahn** Station erreicht sie in guten **15 Minuten** und die **S-Bahn** erreicht sie in ca. **30 Minuten** mit dem Bus bzw. der Tram. Mit dem Problem steht Birgit nicht alleine da. Denn wie schon erwähnt, ist Marzahn-Hellersdorf einer der Bevölkerungsdichten Randbezirke Berlins.
-Eine resiliente und gute Infrastruktur ist in den Randbereichen von Berlin von essenzieller Bedeutung.

@@ -1,16 +1,6 @@
-### Lösungen für das Lebensalter
-
-Dazu können die bereits gut ausgebauten und verfügbaren Haltestellen genutzt werden. Auch Hubs wären in Zukunft denkbar. Dazu bietet sich eine eventuelle Kooperation mit dem Betriebsbahnhof der BVG an.
-
-Des Weiteren können durch geringe infrastrukturelle Änderungen das Medium Fahrrad als individuelle Ergänzung besser mit integriert werden. Dazu zählen sichere Abstellmöglichkeiten an Hubs oder gar den Haltestellen/Bahnhöfe des ÖPNV
-
 ### Lösungsansätze 
-* **Taktung** der bereits bestehenden Bus- und Tram Linien erhöhen 
-
-* **Expressbuslinien** (Bsp. X69) einführen die die Verkehrsadern bzw. großen Bahnhöfe ansteuern
-
-* **Mikromobilitätsangebote** wie Leihfahrräder oder e Scooter fördern oder Hubs einrichten, Stichwort Betriebsbahnhof der BVG
-
-* der **Ausbau von dedizierten Radverkehrsanlagen** 
-
-* Möglichkeiten zum **sicheren abstellen des Fahrrades** am Bahnhof. Der Weg zur nächsten U-Bahn ist gerade so für junge Menschen mit einer Schrittgeschwindigkeit von 6 km/h in 15min zu erreichen.
+Um die erreichbarkeit innerhalb des Bezirks weiter zu stärken, sollte die * **Taktung** der 
+bestehenden Bus- und Straßenbahn Linien weiter erhöht werden. Um die Anbindung an das übrige Stadtgebiet zu stärken,
+sollte die Anbindung an die S-Bahnstation Mehrower Allee MARKER EINFÜGEN und die U-Bahnstation Hellersdorf MARKER EINFÜGEN
+verbessert werden. Zu diesem Zweck könnte eine * **Expressbus-Linie** eingerichtet werden, die bestehenden ÖPNV-Infrastruktur
+miteinander verknüpft. 
