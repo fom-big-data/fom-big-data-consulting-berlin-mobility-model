@@ -2,7 +2,7 @@
 **Um Gebiete zu identifizieren, die im Rahmen von Infrastrukturprojekten zukünftig berücksichtigt werden sollten, werden 
 Gebiete mit geringer Anbindungsqualität anhand ihrer Nähe zu wichtigen Orten priorisiert**. Als wichtige Orte gelten 
 Handels- und Dienstleistungszentren, Gewerbegebiete sowie Hochschulen und dicht besiedelte Wohngebiete. **Ziel der 
-Priorisierung ist es, Gebiete zu identifizieren die aufgrund der hohen dichte wichtiger Orte über eine gute Anbindungsqualität 
+Priorisierung ist es, Gebiete zu identifizieren die aufgrund der hohen Dichte wichtiger Orte über eine gute Anbindungsqualität 
 verfügen sollten, die jedoch nicht gegeben ist**. **Im Rahmen der Priorisierung wurden fünf Gebiete ausgewählt**. 
 Aufbauend auf der quantitativen Analyse, die mithilfe der Isochrone durchgeführt wurde, wird die Verkehrsinfrastruktur, 
 die zur Anbindung dieser Orte zur Verfügung steht, auch qualitativ betrachtet. Auf diese Weise wird ein tiefgreifendes 
