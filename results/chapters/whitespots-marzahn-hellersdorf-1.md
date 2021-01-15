@@ -1,9 +1,14 @@
-### Wenn es in die Innenstadt geht
+### Lösungen für das Lebensalter
 
-Wenn Birgit in die Stadt will, um Shoppen zu gehen oder ihre Enkel zu besuchen, muss sie Fahrtwege von etwas mehr als 45 Minuten auf sich nehmen. Zum **Alexanderplatz** kommt sie mit der **Tramlinie M6** in ca. **45 Minuten**. 
+Durch den demografischen Wandel müssen auch ältere Menschen berücksichtigt werden. Dazu können die bereits gut ausgebauten und verfügbaren Haltestellen genutzt werden. Auch Hubs wären in Zukunft denkbar. Dazu bietet sich eine eventuelle Kooperation mit dem Betriebsbahnhof der BVG an.
 
-Um noch weiter fahren zu können, muss sie sich im endeffekt auf die Bus- und Tramlinien verlassen. Denn nur mit ihnen, kommt sie in einer angemessenen Zeit zur U-Bahn oder zur S-Bahn. 
+Des Weiteren können durch geringe infrastrukturelle Änderungen das Medium Fahrrad als individuelle Ergänzung besser mit integriert werden. Dazu zählen sichere Abstellmöglichkeiten an Hubs oder gar den Haltestellen/Bahnhöfe des ÖPNV
 
-Die **U-Bahn** erreicht sie in guten **15 Minuten** und die **S-Bahn** erreicht sie in ca. **30 Minuten** mit dem Bus bzw. der Tram.
-Mit dem Problem steht Birgit nicht alleine da. Denn wie schon erwähnt ist Marzahn-Hellersdorf einer der Bevölkerungsdichten Randbezirke Berlins.
-Eine resiliente und gute Infrastruktur ist in den Randbereichen von Berlin von essenzieller Bedeutung.
+### Lösungsansätze 
+* **Taktung** der bereits bestehenden Bus- und Tram Linien erhöhen 
+
+* **Expressbuslinien** (Bsp. X69) einführen die die Verkehrsadern bzw. großen Bahnhöfe ansteuern
+
+* **Mikromobilitätsangebote** wie Leihfahrräder oder e Scooter fördern oder Hubs einrichten, Stichwort Betriebsbahnhof der BVG
+
+* Möglichkeiten zum **sicheren abstellen des Fahrrades** am Bahnhof. Der Weg zur nächsten U-Bahn ist gerade so für junge Menschen mit einer Schrittgeschwindigkeit von 6 km/h in 15min zu erreichen.
