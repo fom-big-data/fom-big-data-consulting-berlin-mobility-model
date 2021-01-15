@@ -1,4 +1,4 @@
-## Tim Timmich fährt täglich mit dem Auto von Schöneberg nach Britz, für ihn kommt der ÖPNV wegen der langen Fahrzeit nicht in Frage.
+## Tim Timmich fährt täglich mit dem Auto von Schöneberg nach Britz, die S-Bahn Fahrt dauert ihm zu lange
 
 * **Name** Tim Timmich
 * **Alter** 42
