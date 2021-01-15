@@ -1,6 +1,6 @@
 ### Lösungen für das Lebensalter
 
-Durch den demografischen Wandel müssen auch ältere Menschen berücksichtigt werden. Dazu können die bereits gut ausgebauten und verfügbaren Haltestellen genutzt werden. Auch Hubs wären in Zukunft denkbar. Dazu bietet sich eine eventuelle Kooperation mit dem Betriebsbahnhof der BVG an.
+Dazu können die bereits gut ausgebauten und verfügbaren Haltestellen genutzt werden. Auch Hubs wären in Zukunft denkbar. Dazu bietet sich eine eventuelle Kooperation mit dem Betriebsbahnhof der BVG an.
 
 Des Weiteren können durch geringe infrastrukturelle Änderungen das Medium Fahrrad als individuelle Ergänzung besser mit integriert werden. Dazu zählen sichere Abstellmöglichkeiten an Hubs oder gar den Haltestellen/Bahnhöfe des ÖPNV
 
