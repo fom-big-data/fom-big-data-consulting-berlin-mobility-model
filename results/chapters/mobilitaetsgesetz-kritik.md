@@ -1,6 +1,2 @@
 ### Kritik an der Umsetzung des Mobilitätsgesetzes
-
-Zuletzt kam vermehrt Kritik an der Umsetzung des Berliner Mobilitätsgesetztes auf. Dabei wurde beanstandet, dass 
-die Maßnahmen unzureichend geplant seien und die Umsetzung nur schleppend voranginge. Die Planung einer stadtweiten 
-und zukunftssicheren Radverkehrsanlage ist beispielweise überfällig und über den Stellenwert, 
-der dem Autoverkehr zukünftig zugeschrieben werden soll, herrscht unter den politischen Akteuren weiterhin Uneinigkeit.
+Zuletzt war die Umsetzung des Berliner Mobilitätsgesetztes regelmäßig Ziel öffentlicher Kritik. Dabei wird beanstandet, dass **Maßnahmen unzureichend geplant seien und die Umsetzung nur schleppend vorangehe**. Die Planung einer stadtweiten und zukunftssicheren Radverkehrsanlage ist beispielweise überfällig und über den Stellenwert. Zudem herrscht zwischen den agierenden politischen Akteuren weiterhin **Uneinigkeit über den Stellenwert, der dem Autoverkehr zukünftig zugeschrieben werden soll**.
