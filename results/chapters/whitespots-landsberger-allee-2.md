@@ -6,4 +6,4 @@ U-Bahn-Station <span class="marker-label" id="marker-label-u-magdalenenstrasse">
   <span class="marker-label" id="marker-label-s-storkower-strasse">Storkower Straße</span>
   , <span class="marker-label" id="marker-label-s-springpfuhl">Springpfuhl</span> und 
   <span class="marker-label" id="marker-label-s-poelchaustrasse">Pölchaustraße</span>. Allerdings sind diese nicht unmittelbar
-   zu Fuß erreichbar. Insbesondere außerhalb der Stoßzeiten sind diese bedingt durch den geringeren Takt der Tram nur schwer zu erreichen.
+   zu Fuß erreichbar. Insbesondere außerhalb der Stoßzeiten sind diese bedingt durch den geringeren Takt der Straßenbahn nur schwer zu erreichen.
