@@ -1,10 +1,9 @@
 ### Der dicht besiedelte Osten Marzahn-Hellersdorfs
 
 Der östliche Teil Marzahn-Hellersdorfs ist von einer sehr hohen Einwohnerdichte geprägt. Die **ÖPNV-Anbindung** in diesem Gebiet 
-ist stark von der Straßenbahninfrastruktur geprägt. Die Straßenbahnhaltestellen MARKER FÜR DIE STRAßENBAHN HALTESTELLEN HIER EINFÜGEN
-bieten eine gute Anbindung innerhalb des Kiezes. Gebiete die außerhalb des Straßenbahnnetzes liegen, sind vom östlichen Rand 
-Marzahn-Hellersdorfs jedoch kaum erreichbar. Die nächste S-Bahnstation MARKER HIER EINFÜGEN ist mit dem Bus XX Minuten entfernt. Bus zur nächstgelegene U-Bahn Station MARKER HIER EINFÜGEN 
-sind mindestens 15 Minuten mit dem Bus einzuplanen. 
+ist stark von der Straßenbahninfrastruktur geprägt. Die Straßenbahnhaltestellen <span class="marker-label" id="marker-label-tram-altehellerdorfer"> Alte-Hellerdorfer</span> und <span class="marker-label" id="marker-label-tram-michendorfer">Michendorfer</span> bieten eine gute Anbindung innerhalb des Kiezes. Gebiete die außerhalb des Straßenbahnnetzes liegen, sind vom östlichen Rand 
+Marzahn-Hellersdorfs jedoch kaum erreichbar. Die nächste S-Bahnstation 
+<span class="marker-label" id="marker-label-s-mehrower">S Mehrower Allee</span> ist mit dem Bus 30 Minuten entfernt. Bus zur nächstgelegene U-Bahn Station <span class="marker-label" id="marker-label-u-hellersdorf">U Hellersdorf</span> sind mindestens 15 Minuten mit dem Bus oder der Tram einzuplanen. 
 
 Davon sind Arbeitnehmer*innen die in anderen Bezirken tätig sind besonders betroffen. 
 Aber auch Senior*innen die sich innerhalb des Bezirks bewegen und beispielsweise in der Nachbarschaft engagieren, stehen vor großen
