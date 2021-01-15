@@ -11,6 +11,6 @@ zentrale Rolle zu. So wurden neue Siedlungsgebiete in den Randbezirken mit neuen
 
 Die historische Trennung der Stadt in West- und Ost-Berlin wird auch anhand der Karte deutlich. **Bis heute verläuft im 
 Westen der Stadt keine Straßenbahnlinie, sodass die Anbindung des westlichen Stadtgebiets an das Straßenbahnnetz nicht 
-gewährleistet ist**. Die** maximal zurücklegbare Strecke beträgt 4,6 Kilometern in 15 Minuten. Durchschnittlich werden 
+gewährleistet ist**. Die **maximal zurücklegbare Strecke beträgt 4,6 Kilometern in 15 Minuten. Durchschnittlich werden 
 in dieser Zeit 3,9 Kilometern zurückgelegt**. Im gesamten westlichen Stadtgebiet entspricht die Anbindungsqualität der 
 Fußgeschwindigkeit, da innerhalb von 15 Minuten kein Straßenbahnhalt erreichbar ist.
