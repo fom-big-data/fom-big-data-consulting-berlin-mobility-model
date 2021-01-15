@@ -4,7 +4,7 @@ Die Anbindung des **ÖPNV** kann als **durchschnittlich** angesehen werden. Die 
 
 ### Wenn es in die Innenstadt geht
 
-Wenn Birgit in die Stadt will, um Shoppen zu gehen oder ihre Ur-Enkelin besuchen möchte, muss sie Fahrtwege von etwas mehr als 45 Minuten auf sich nehmen. Zum **Alexanderplatz** kommt sie mit der **Tramlinie M6** in ca. **45 Minuten**. Zu Ihrer Ur-Enkelin kann sie ebenfalls in ungefähr 45 Minuten da sein. Die Verbindung beider Strecken würde eine ungefähre Fahrtzeit am Tag von 2,5 bis 3 Stunden ergeben.
+Wenn Birgit in die Stadt will, um Shoppen zu gehen oder ihre Ur-Enkelin im Süd-Osten besuchen möchte, muss sie Fahrtwege von etwas mehr als 45 Minuten auf sich nehmen. Zum **Alexanderplatz** kommt sie mit der **Tramlinie M6** in ca. **45 Minuten**. Zu Ihrer Ur-Enkelin kann sie ebenfalls in ungefähr 45 Minuten da sein. Die Verbindung beider Strecken würde eine ungefähre Fahrtzeit am Tag von 2,5 bis 3 Stunden ergeben.
 
-Die nächst gelegene **U-Bahn** Station erreicht sie in guten **15 Minuten** und die **S-Bahn** erreicht sie in ca. **30 Minuten** mit dem Bus bzw. der Tram. Mit dem Problem steht Birgit nicht alleine da. Denn wie schon erwähnt ist Marzahn-Hellersdorf einer der Bevölkerungsdichten Randbezirke Berlins.
+Die nächst gelegene **U-Bahn** Station erreicht sie in guten **15 Minuten** und die **S-Bahn** erreicht sie in ca. **30 Minuten** mit dem Bus bzw. der Tram. Mit dem Problem steht Birgit nicht alleine da. Denn wie schon erwähnt, ist Marzahn-Hellersdorf einer der Bevölkerungsdichten Randbezirke Berlins.
 Eine resiliente und gute Infrastruktur ist in den Randbereichen von Berlin von essenzieller Bedeutung.
