@@ -5,6 +5,8 @@ import networkx as nx
 import osmnx as ox
 from geojson import FeatureCollection
 from tqdm import tqdm
+from shapely.geometry import MultiPoint
+
 
 
 def load_graphml_from_file(file_path, place_name, network_type=None, custom_filter=None):
@@ -172,31 +174,25 @@ def get_possible_routes(g, start_point, travel_time_minutes, transport, distance
 
     if radius > 0:
         subgraph = nx.ego_graph(g, center_node, radius=radius, distance=distance_attribute)
-
-        write_nodes_to_geojson("isochrones-" + transport + "-" + str(travel_time_minutes) + "-" + str(start_point[0]) + "-" +
-                               str(start_point[1]) + ".geojson", subgraph)
-
         nodes, edges = ox.graph_to_gdfs(subgraph)
-        return nodes, edges, walking_distance_meters
-    else:
-        return [], [], walking_distance_meters
+
+        write_nodes_to_geojson("../results/isochrones-" + transport + "-" + str(travel_time_minutes) + "-" + str(start_point[0]) + "-" +
+                               str(start_point[1]) + ".geojson", subgraph)
+        write_convex_hull_to_geojson("../results/isochrones-hull-" + transport + "-" + str(travel_time_minutes) + "-" + str(start_point[0]) + "-" +
+                               str(start_point[1]) + ".geojson", nodes)
+
+
+def get_convex_hull(nodes):
+    return MultiPoint(nodes.reset_index()["geometry"]).convex_hull.exterior.coords.xy
 
 
 def write_nodes_to_geojson(file_path, g):
     if not path.exists(file_path):
         print("Save " + file_path)
 
-        features = []
 
-        if len(g.nodes) > 0:
-            for node_id in g.nodes:
-                node = g.nodes[node_id]
-                feature = {}
-                feature["geometry"] = {"type": "Point", "coordinates": [node["x"], node["y"]]}
-                feature["type"] = "Feature"
-                features.append(feature)
-
-        collection = FeatureCollection(features)
+        node_features = get_node_features(g)
+        collection = FeatureCollection(node_features)
 
         with open(file_path, "w") as f:
             f.write("%s" % collection)
@@ -204,8 +200,75 @@ def write_nodes_to_geojson(file_path, g):
         print("Exists " + file_path)
 
 
-def plot_graph(g):
-    ox.plot_graph(g)
+def write_convex_hull_to_geojson(file_path, nodes):
+    if not path.exists(file_path):
+        longitudes, latitudes = get_convex_hull(nodes)
+        features = []
+
+        points = []
+        for point in zip(latitudes, longitudes):
+            points.append(point)
+        # Close line string
+        points.append(points[0])
+
+        for i in range(0, len(points)-1):
+            start = points[i]
+            end = points[i+1]
+            feature = {}
+            feature["geometry"] = {"type": "LineString", "coordinates": [[start[1], start[0]],
+                                                                         [end[1], end[0]]]}
+            feature["type"] = "Feature"
+            features.append(feature)
+
+        collection = FeatureCollection(features)
+
+        with open(file_path, "w") as f:
+            f.write("%s" % collection)
+
+    else:
+        print("Exists " + file_path)
+
+def write_edges_to_geojson(file_path, g):
+    if not path.exists(file_path):
+        print("Save " + file_path)
+
+        edge_features = get_edge_features(g)
+        collection = FeatureCollection(edge_features)
+
+        with open(file_path, "w") as f:
+            f.write("%s" % collection)
+    else:
+        print("Exists " + file_path)
+
+
+def get_edge_features(g):
+    features = []
+
+    if len(g.edges) > 0:
+        for node_ids in g.edges:
+            node_start = g.nodes[node_ids[0]]
+            node_end = g.nodes[node_ids[1]]
+            feature = {}
+            feature["geometry"] = {"type": "LineString", "coordinates": [[node_start["x"], node_start["y"]],
+                                                                         [node_end["x"], node_end["y"]]]}
+            feature["type"] = "Feature"
+            features.append(feature)
+
+    return features
+
+
+def get_node_features(g):
+    features = []
+
+    if len(g.nodes) > 0:
+        for node_id in g.nodes:
+            node = g.nodes[node_id]
+            feature = {}
+            feature["geometry"] = {"type": "Point", "coordinates": [node["x"], node["y"]]}
+            feature["type"] = "Feature"
+            features.append(feature)
+
+    return features
 
 
 #
